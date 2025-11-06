@@ -4,335 +4,303 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Burma Made — Animation Studio</title>
-  <meta name="description" content="Lumina Motion: Creative animation studio offering 2D/3D animation, motion design, storyboarding, concept art, and full production services." />
-
-  <!-- Tailwind CDN (fast prototyping) -->
-  <script>
-    // small Tailwind config for font-family and dark mode preferences
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          fontFamily: {
-            inter: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', '"Segoe UI"', 'Roboto', '"Helvetica Neue"', 'Arial'],
-          },
-          borderRadius: {
-            'xl2': '14px',
-          },
-          boxShadow: {
-            'lg-soft': '0 8px 30px rgba(11,18,32,0.6)',
-            'lg-deep': '0 6px 18px rgba(2,6,23,0.6)',
-            'logo': '0 6px 18px rgba(2,6,23,0.6)',
-          },
-          transitionTimingFunction: {
-            'custom-ease': 'cubic-bezier(.2,.9,.3,1)',
-          },
-          keyframes: {
-            floaty: {
-              '0%': { transform: 'translateY(0)' },
-              '50%': { transform: 'translateY(-8px)' },
-              '100%': { transform: 'translateY(0)' },
-            }
-          },
-          animation: {
-            'floaty': 'floaty 6s custom-ease infinite',
-          }
-        }
-      }
-    }
-  </script>
+  <meta name="description" content="Burma Made: Creative animation studio offering 2D/3D animation, motion design, storyboarding." />
+  <!-- Tailwind CDN (good for prototyping) -->
   <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Minimal custom styles only for exact background gradients and focus outline -->
   <style>
     :root{
-      --bg:#0f1724; /* deep navy */
-      --card:#0b1220;
-      --muted:#9aa6b2;
-      --accent-1:#7c5cff;
-      --accent-2:#00d4ff;
-      --glass: rgba(255,255,255,0.04);
+      --accent: #E54B3E; /* primary logo-derived color */
+      --accent-2: #F7B19E;
+      --bg-warm: #F6E6DA;
+      --text-dark: #0F172A;
     }
-    /* Complex overlapping radial gradients replicated exactly */
-    body {
-      background:
-        radial-gradient(1200px 600px at 10% 10%, rgba(124,92,255,0.08), transparent),
-        radial-gradient(900px 400px at 90% 90%, rgba(0,212,255,0.04), transparent),
-        var(--bg);
-      color-scheme: dark;
+
+    /* Custom animations */
+    @keyframes floaty {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0px); }
     }
-    /* focus ring like original */
-    a:focus {
-      outline: 3px solid rgba(124,92,255,0.18);
-      outline-offset: 4px;
-      border-radius: 6px;
+    @keyframes reveal {
+      0% { opacity: 0; transform: translateY(12px); }
+      100% { opacity: 1; transform: translateY(0); }
     }
-    /* small helpers for box backgrounds that Tailwind can't easily make identical */
-    .bg-card { background-color: var(--card); }
-    .muted-color { color: var(--muted); }
-    .accent-gradient {
-      background: linear-gradient(90deg, var(--accent-1), var(--accent-2));
+
+    .floaty { animation: floaty 6s ease-in-out infinite; }
+    .reveal { animation: reveal 0.6s ease forwards; opacity: 0; }
+
+    /* Decorative diagonal overlay */
+    .diagonal {
+      background: linear-gradient(135deg, rgba(229,75,62,0.06) 0%, transparent 35%);
+      pointer-events: none;
     }
-    .accent-gradient-vertical {
-      background: linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
-    }
+
+    /* Soft glass card look for portfolio items */
     .glass {
-      background: var(--glass);
+      backdrop-filter: blur(6px) saturate(120%);
+      background: linear-gradient(180deg, rgba(255,255,255,0.55), rgba(255,255,255,0.30));
+      border: 1px solid rgba(15,23,42,0.06);
     }
+
+    /* subtle focus outline */
+    :focus { outline: 2px solid rgba(229,75,62,0.12); outline-offset: 2px; }
   </style>
 </head>
-<body class="min-h-screen antialiased text-[#e7eef6] font-inter leading-6 p-8 flex justify-center">
-  <div class="w-full max-w-[1200px]">
-
-    <!-- Header -->
-    <header class="flex items-center justify-between mb-7">
-      <div class="flex items-center gap-3">
-        <div class="w-[54px] h-[54px] rounded-[12px] flex items-center justify-center logo accent-gradient" aria-hidden>
-          <!-- logo shadow -->
-          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-[30px] h-[30px] filter drop-shadow-[0_6px_14px_rgba(0,0,0,0.5)]">
-            <path d="M4 20 L20 4" stroke="#021021" stroke-width="2.4" stroke-linecap="round"/>
-            <path d="M4 8 L12 8" stroke="#021021" stroke-width="2.4" stroke-linecap="round"/>
-          </svg>
-        </div>
-        <div>
-          <h1 class="text-[18px] m-0">Lumina Motion</h1>
-          <p class="text-[12px] muted-color m-0">Animation • Motion Design • Visual Development</p>
-        </div>
+<body class="antialiased text-[16px] leading-relaxed" style="background: linear-gradient(180deg, var(--bg-warm) 0%, #FFF 100%); color: var(--text-dark);">
+  <!-- Header -->
+  <header class="flex items-center justify-between px-6 py-6 mx-auto max-w-7xl">
+    <a href="#" class="flex items-center gap-3">
+      <!-- Logo -->
+      <div class="flex items-center justify-center w-12 h-12 overflow-hidden rounded-md shadow-md">
+        <img src="https://avatars.githubusercontent.com/u/242332725?v=4" alt="Burma Made Logo" class="object-cover w-full h-full"/>
       </div>
-
-      <nav aria-label="Main navigation" class="flex items-center gap-5">
-        <a href="#services" class="text-[14px] font-semibold muted-color no-underline">Services</a>
-        <a href="#work" class="text-[14px] font-semibold muted-color no-underline">Work</a>
-        <a href="#process" class="text-[14px] font-semibold muted-color no-underline">Process</a>
-        <a href="#contact" class="px-4 py-2 rounded-[10px] font-bold text-[#051023] accent-gradient no-underline">Get a Quote</a>
-      </nav>
-    </header>
-
-    <main>
-      <!-- Hero -->
-      <section class="grid grid-cols-[1fr_420px] gap-7 items-center mb-9 md:grid-cols-1" aria-labelledby="hero-head">
-        <div class="hero-left">
-          <h2 id="hero-head" class="text-[38px] font-semibold mb-3">We craft stories with movement — 2D, 3D & motion design</h2>
-          <p class="mb-4 muted-color">Full-service animation studio for commercials, branded content, explainer videos, and character-driven storytelling. We pair cinematic visuals with quick turnarounds.</p>
-
-          <div class="flex flex-wrap gap-3">
-            <a href="#contact" class="inline-flex items-center gap-2 px-4 py-3 rounded-[10px] font-extrabold accent-gradient text-[#051023] no-underline">
-              Request a proposal
-            </a>
-            <a href="#work" class="inline-flex items-center gap-2 px-4 py-3 rounded-[10px] font-extrabold border border-[rgba(255,255,255,0.06)] muted-color no-underline">
-              View our work
-            </a>
-          </div>
-
-          <div class="mt-4 text-[13px] muted-color">
-            Trusted by:
-            <strong class="ml-2 text-white">PixelForge • Nova Ads • Ember Films</strong>
-          </div>
-        </div>
-
-        <aside class="visual bg-card rounded-[16px] p-4 shadow-lg-soft" aria-hidden>
-          <div class="w-full h-[320px] rounded-[10px] overflow-hidden relative flex items-center justify-center">
-            <div class="absolute inset-3 rounded-[8px] p-4 flex items-center justify-center device-mock animate-floaty">
-              <div class="w-full h-full rounded-[8px] flex items-center justify-center device-inner" role="img" aria-label="Studio highlight video" style="background: linear-gradient(135deg, rgba(124,92,255,0.08), rgba(0,212,255,0.02));">
-                <div class="w-[84px] h-[84px] rounded-full flex items-center justify-center font-extrabold text-[#021021] accent-gradient shadow-[0_10px_30px_rgba(124,92,255,0.12)] transform transition-transform duration-500 ease-[cubic-bezier(.2,.9,.3,1)] hover:-translate-y-1.5">
-                  ▶
-                </div>
-              </div>
-            </div>
-          </div>
-        </aside>
-      </section>
-
-      <!-- Services -->
-      <section id="services" class="grid grid-cols-3 gap-4 mb-9 md:grid-cols-1" aria-labelledby="services-head">
-        <h2 class="col-span-full text-[20px] m-0" id="services-head">Our Services</h2>
-        <p class="mt-0 mb-3 col-span-full muted-color">From concept to final delivery — we offer end-to-end animation services tailored to your brand and audience.</p>
-
-        <!-- Cards: 6 items -->
-        <article class="card bg-card rounded-[12px] p-4 shadow-lg-deep min-h-[140px] flex flex-col gap-3">
-          <div class="flex items-start gap-3">
-            <div class="w-[54px] h-[54px] rounded-[10px] flex items-center justify-center accent-gradient-vertical" aria-hidden>
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M4 6h16v12H4z" stroke="white" stroke-opacity="0.9" stroke-width="1.2" stroke-linejoin="round"/></svg>
-            </div>
-            <div>
-              <h3 class="m-0">2D Animation</h3>
-              <div class="muted-color text-[14px]">Character animation, frame-by-frame, rigging, and TVC work.</div>
-            </div>
-          </div>
-        </article>
-
-        <article class="card bg-card rounded-[12px] p-4 shadow-lg-deep min-h-[140px] flex flex-col gap-3">
-          <div class="flex items-start gap-3">
-            <div class="w-[54px] h-[54px] rounded-[10px] flex items-center justify-center accent-gradient-vertical" aria-hidden>
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M12 2l8 4v8l-8 4-8-4V6z" stroke="white" stroke-opacity="0.9" stroke-width="1.2" stroke-linejoin="round"/></svg>
-            </div>
-            <div>
-              <h3 class="m-0">3D & CG</h3>
-              <div class="muted-color text-[14px]">Modeling, lighting, animation, and render pipelines for commercials and shorts.</div>
-            </div>
-          </div>
-        </article>
-
-        <article class="card bg-card rounded-[12px] p-4 shadow-lg-deep min-h-[140px] flex flex-col gap-3">
-          <div class="flex items-start gap-3">
-            <div class="w-[54px] h-[54px] rounded-[10px] flex items-center justify-center accent-gradient-vertical" aria-hidden>
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M3 12h18" stroke="white" stroke-opacity="0.9" stroke-width="1.2" stroke-linecap="round"/></svg>
-            </div>
-            <div>
-              <h3 class="m-0">Motion Design</h3>
-              <div class="muted-color text-[14px]">Brand films, UI motion, infographics, and kinetic typography.</div>
-            </div>
-          </div>
-        </article>
-
-        <article class="card bg-card rounded-[12px] p-4 shadow-lg-deep min-h-[140px] flex flex-col gap-3">
-          <div class="flex items-start gap-3">
-            <div class="w-[54px] h-[54px] rounded-[10px] flex items-center justify-center accent-gradient-vertical" aria-hidden>
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="7" height="7" stroke="white" stroke-opacity="0.9" stroke-width="1.2"/></svg>
-            </div>
-            <div>
-              <h3 class="m-0">Storyboarding & Concept</h3>
-              <div class="muted-color text-[14px]">Script breakdown, visual development, and animatics to lock the story early.</div>
-            </div>
-          </div>
-        </article>
-
-        <article class="card bg-card rounded-[12px] p-4 shadow-lg-deep min-h-[140px] flex flex-col gap-3">
-          <div class="flex items-start gap-3">
-            <div class="w-[54px] h-[54px] rounded-[10px] flex items-center justify-center accent-gradient-vertical" aria-hidden>
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8" stroke="white" stroke-opacity="0.9" stroke-width="1.2"/></svg>
-            </div>
-            <div>
-              <h3 class="m-0">Full Production</h3>
-              <div class="muted-color text-[14px]">Casting, voiceover, sound design, compositing, and final delivery in any format.</div>
-            </div>
-          </div>
-        </article>
-
-        <article class="card bg-card rounded-[12px] p-4 shadow-lg-deep min-h-[140px] flex flex-col gap-3">
-          <div class="flex items-start gap-3">
-            <div class="w-[54px] h-[54px] rounded-[10px] flex items-center justify-center accent-gradient-vertical" aria-hidden>
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M12 4v16" stroke="white" stroke-opacity="0.9" stroke-width="1.2" stroke-linecap="round"/></svg>
-            </div>
-            <div>
-              <h3 class="m-0">Creative Consulting</h3>
-              <div class="muted-color text-[14px]">Brand strategy, pitch decks, and production budgeting to meet goals and ROI.</div>
-            </div>
-          </div>
-        </article>
-      </section>
-
-      <!-- Process -->
-      <section id="process" class="flex items-start gap-3 mb-9 md:flex-col" aria-labelledby="process-head">
-        <div class="flex-1">
-          <h2 id="process-head" class="m-0">Our Process</h2>
-          <p class="muted-color">A collaborative 5-step process that keeps you informed at every stage.</p>
-        </div>
-
-        <div class="flex-2 flex gap-3 w-[65%] md:w-full md:flex-col md:gap-3">
-          <div class="step accent-gradient-vertical p-4 rounded-[12px] flex gap-3 items-start flex-1">
-            <div class="num glass px-3 py-2 rounded-[10px] text-[14px] font-bold muted-color">01</div>
-            <div>
-              <strong>Discovery</strong>
-              <div class="muted-color">Kickoff, goals, audience and scope.</div>
-            </div>
-          </div>
-
-          <div class="step accent-gradient-vertical p-4 rounded-[12px] flex gap-3 items-start flex-1">
-            <div class="num glass px-3 py-2 rounded-[10px] text-[14px] font-bold muted-color">02</div>
-            <div>
-              <strong>Concept</strong>
-              <div class="muted-color">Moodboards, scripts, thumbnails and storyboards.</div>
-            </div>
-          </div>
-
-          <div class="step accent-gradient-vertical p-4 rounded-[12px] flex gap-3 items-start flex-1">
-            <div class="num glass px-3 py-2 rounded-[10px] text-[14px] font-bold muted-color">03</div>
-            <div>
-              <strong>Production</strong>
-              <div class="muted-color">Animation, modeling, rigging and voice sessions.</div>
-            </div>
-          </div>
-
-          <div class="step accent-gradient-vertical p-4 rounded-[12px] flex gap-3 items-start flex-1">
-            <div class="num glass px-3 py-2 rounded-[10px] text-[14px] font-bold muted-color">04</div>
-            <div>
-              <strong>Post</strong>
-              <div class="muted-color">Compositing, color, sound design and renders.</div>
-            </div>
-          </div>
-
-          <div class="step accent-gradient-vertical p-4 rounded-[12px] flex gap-3 items-start flex-1">
-            <div class="num glass px-3 py-2 rounded-[10px] text-[14px] font-bold muted-color">05</div>
-            <div>
-              <strong>Delivery</strong>
-              <div class="muted-color">Final assets, variants, and project wrap.</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Work / Projects -->
-      <section id="work" aria-labelledby="work-head" class="mb-9">
-        <h2 id="work-head" class="m-0">Selected Work</h2>
-        <p class="muted-color">A glimpse at recent campaigns and shorts we produced.</p>
-
-        <div class="grid grid-cols-3 gap-4 mt-3 projects md:grid-cols-2 sm:grid-cols-1">
-          <figure class="proj relative rounded-[12px] overflow-hidden min-h-[160px]" role="img" aria-label="Project - Ember Soda">
-            <img src="https://images.unsplash.com/photo-1503602642458-232111445657?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Project thumbnail - Ember Soda" class="block object-cover w-full h-full">
-            <figcaption class="overlay absolute inset-0 bg-gradient-to-t from-transparent to-[rgba(2,6,23,0.6)] flex items-end p-3 text-white">
-              <div>
-                <strong>Ember Soda — TVC</strong>
-                <div class="muted-color text-[14px]">Character ad — 30s</div>
-              </div>
-            </figcaption>
-          </figure>
-
-          <figure class="proj relative rounded-[12px] overflow-hidden min-h-[160px]" role="img" aria-label="Project - Nova Finance">
-            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Project thumbnail - Nova Finance" class="block object-cover w-full h-full">
-            <figcaption class="overlay absolute inset-0 bg-gradient-to-t from-transparent to-[rgba(2,6,23,0.6)] flex items-end p-3 text-white">
-              <div>
-                <strong>Nova Finance — Explainer</strong>
-                <div class="muted-color text-[14px]">2D motion explainer — 90s</div>
-              </div>
-            </figcaption>
-          </figure>
-
-          <figure class="proj relative rounded-[12px] overflow-hidden min-h-[160px]" role="img" aria-label="Project - PixelForge">
-            <img src="https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Project thumbnail - PixelForge" class="block object-cover w-full h-full">
-            <figcaption class="overlay absolute inset-0 bg-gradient-to-t from-transparent to-[rgba(2,6,23,0.6)] flex items-end p-3 text-white">
-              <div>
-                <strong>PixelForge — Brand Reel</strong>
-                <div class="muted-color text-[14px]">Studio showreel — 2m</div>
-              </div>
-            </figcaption>
-          </figure>
-        </div>
-      </section>
-
-      <!-- Contact / CTA -->
-      <section id="contact" class="mb-9">
-        <div class="cta-band flex items-center justify-between p-5 rounded-[14px] mb-9" style="background: linear-gradient(90deg, rgba(124,92,255,0.06), rgba(0,212,255,0.03));">
-          <div>
-            <h3 class="m-0">Ready to start your project?</h3>
-            <div class="muted-color">Tell us about your goals and we'll send a tailored proposal and budget estimate.</div>
-          </div>
-          <div class="flex items-center gap-3">
-            <a href="mailto:hello@luminamotion.studio" class="inline-flex items-center gap-2 px-4 py-3 rounded-[10px] font-extrabold accent-gradient text-[#051023] no-underline">Email us</a>
-            <a href="#" class="inline-flex items-center gap-2 px-4 py-3 rounded-[10px] font-extrabold border border-[rgba(255,255,255,0.06)] muted-color no-underline">Schedule call</a>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="flex items-center justify-between pt-5 border-t border-[rgba(255,255,255,0.03)] muted-color md:flex-col md:gap-3">
-      <div>© <strong>Lumina Motion</strong> — All rights reserved</div>
-      <div class="flex items-center gap-3">
-        <a href="#" class="no-underline muted-color">Privacy</a>
-        <a href="#" class="no-underline muted-color">Terms</a>
+      <div class="text-sm leading-tight">
+        <div class="text-lg font-semibold" style="color:var(--text-dark)">Burma Made</div>
+        <div class="text-xs text-slate-600">Animation & Motion Studio</div>
       </div>
-    </footer>
+    </a>
+
+    <nav class="items-center hidden gap-6 text-sm md:flex">
+      <a href="#work" class="hover:underline">Work</a>
+      <a href="#services" class="hover:underline">Services</a>
+      <a href="#about" class="hover:underline">About</a>
+      <a href="#contact" class="px-4 py-2 font-medium rounded-md" style="background: linear-gradient(90deg,var(--accent),#FF7A62); color:white">Contact</a>
+    </nav>
+
+    <div class="md:hidden">
+      <button aria-label="Open menu" class="p-2 border rounded-md" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 12h16M4 17h16" stroke="#0F172A" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </header>
+
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="hidden px-6 pb-6">
+    <div class="flex flex-col max-w-2xl gap-3 mx-auto">
+      <a href="#work" class="py-2">Work</a>
+      <a href="#services" class="py-2">Services</a>
+      <a href="#about" class="py-2">About</a>
+      <a href="#contact" class="py-2 text-center text-white rounded-md" style="background:var(--accent)">Contact</a>
+    </div>
   </div>
+
+  <!-- Hero -->
+  <main class="px-6 py-12 mx-auto max-w-7xl">
+    <section class="grid items-center gap-10 md:grid-cols-2">
+      <div>
+        <p class="inline-block px-3 py-1 text-xs font-medium rounded-full" style="background: rgba(229,75,62,0.08); color:var(--accent)">Studio — Motion & Story</p>
+        <h1 class="mt-6 text-4xl font-extrabold leading-tight md:text-5xl" style="color:var(--text-dark)">
+          We craft brand storytelling with motion — <span style="color:var(--accent)">beautifully animated</span> and strategically designed.
+        </h1>
+        <p class="max-w-xl mt-6 text-slate-600">
+          From short promos to full product explainers and 3D character pieces — we combine creative direction, art direction and motion craft to lift your brand.
+        </p>
+
+        <div class="flex flex-wrap gap-4 mt-8">
+          <a href="#contact" class="inline-flex items-center gap-3 px-5 py-3 font-medium rounded-lg shadow-md" style="background: linear-gradient(90deg,var(--accent),#FF7A62); color:white">
+            Book a discovery call
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+
+          <a href="#work" class="inline-flex items-center gap-3 px-5 py-3 text-sm font-medium border rounded-lg" style="border-color: rgba(15,23,42,0.06)">
+            View our work
+          </a>
+        </div>
+
+        <div class="flex items-center gap-6 mt-8 text-sm text-slate-500">
+          <div class="flex items-center gap-3">
+            <div class="flex items-center justify-center w-10 h-10 rounded-md glass" style="width:44px;height:44px;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 12h16M4 17h16" stroke="#0F172A" stroke-width="1.4" stroke-linecap="round"/></svg>
+            </div>
+            <div>
+              <div class="text-sm font-semibold" style="color:var(--text-dark)">Trusted by startups</div>
+              <div class="text-xs">We partner with product teams & agencies</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Animated visual / mock -->
+      <div class="relative">
+        <div class="absolute pointer-events-none -inset-6 diagonal rounded-2xl"></div>
+
+        <div class="overflow-hidden transition-transform transform shadow-2xl rounded-2xl hover:scale-102 floaty" style="animation-delay:0.2s;">
+          <div class="bg-gradient-to-tr from-white to-[#fff6f4] p-6">
+            <!-- Animated scene mock -->
+            <div class="flex items-center justify-center w-full h-64 rounded-lg md:h-80" style="background: linear-gradient(180deg,#fff 0%, rgba(229,75,62,0.03) 100%);">
+              <!-- simplified mock animation using SVG shapes -->
+              <svg viewBox="0 0 600 300" class="w-full h-full">
+                <defs>
+                  <linearGradient id="g" x1="0" x2="1">
+                    <stop offset="0" stop-color="var(--accent)" stop-opacity="0.95"/>
+                    <stop offset="1" stop-color="#FF7A62" stop-opacity="0.7"/>
+                  </linearGradient>
+                </defs>
+                <rect x="40" y="30" width="220" height="150" rx="16" fill="url(#g)">
+                  <animate attributeName="x" from="40" to="60" dur="6s" repeatCount="indefinite" />
+                </rect>
+                <circle cx="420" cy="80" r="36" fill="#fff" opacity="0.9">
+                  <animate attributeName="cy" values="80;60;80" dur="5s" repeatCount="indefinite"/>
+                </circle>
+                <g fill="white" opacity="0.95" transform="translate(360,160)">
+                  <rect x="-80" y="-40" width="140" height="24" rx="6">
+                    <animate attributeName="x" values="-80;-68;-80" dur="4s" repeatCount="indefinite"/>
+                  </rect>
+                </g>
+              </svg>
+            </div>
+
+            <div class="flex items-center justify-between mt-4">
+              <div>
+                <div class="text-sm font-semibold">Explainer — 30s</div>
+                <div class="text-xs text-slate-500">Concept · Storyboard · Motion</div>
+              </div>
+              <div class="font-mono text-sm text-slate-700">Studio — Premium</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Services -->
+  <section id="services" class="px-6 py-12 mx-auto max-w-7xl">
+    <div class="max-w-3xl mx-auto text-center">
+      <h3 class="text-sm font-semibold" style="color:var(--accent)">Services</h3>
+      <h2 class="mt-3 text-3xl font-bold md:text-4xl" style="color:var(--text-dark)">End-to-end animation & motion services</h2>
+      <p class="mt-4 text-slate-600">We handle concept, art direction, character design, animation, and final deliverables across formats.</p>
+    </div>
+
+    <div class="grid gap-6 mt-10 md:grid-cols-3">
+      <article class="p-6 transition transform rounded-xl glass hover:scale-105">
+        <div class="flex items-center justify-center w-12 h-12 rounded-lg" style="background:var(--accent); color:white">🎯</div>
+        <h4 class="mt-4 font-semibold">Creative Direction</h4>
+        <p class="mt-2 text-sm text-slate-600">Brand storytelling, concept development and sequence planning tailored to your goals.</p>
+      </article>
+
+      <article class="p-6 transition transform rounded-xl glass hover:scale-105">
+        <div class="flex items-center justify-center w-12 h-12 rounded-lg" style="background:linear-gradient(90deg,var(--accent),#FF7A62); color:white">🧩</div>
+        <h4 class="mt-4 font-semibold">2D & 3D Animation</h4>
+        <p class="mt-2 text-sm text-slate-600">Character work, motion graphics, and short-form 3D pieces ready for socials and product pages.</p>
+      </article>
+
+      <article class="p-6 transition transform rounded-xl glass hover:scale-105">
+        <div class="flex items-center justify-center w-12 h-12 rounded-lg" style="background:#FDEDE8; color:var(--accent)">⚙️</div>
+        <h4 class="mt-4 font-semibold">Deliverables & Integration</h4>
+        <p class="mt-2 text-sm text-slate-600">Optimized renders, sprites, Lottie exports, and help integrating animations into production builds.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Work / Portfolio -->
+  <section id="work" class="px-6 py-12 mx-auto max-w-7xl">
+    <div class="flex items-center justify-between">
+      <div>
+        <h3 class="text-xl font-bold">Selected Work</h3>
+        <p class="text-slate-600">A selection of short films, promos, and product explainers.</p>
+      </div>
+      <a href="#work" class="text-sm underline">See full portfolio</a>
+    </div>
+
+    <div class="grid gap-6 mt-8 sm:grid-cols-2 md:grid-cols-3">
+      <!-- sample cards -->
+      <figure class="relative overflow-hidden transition transform rounded-lg group hover:scale-105">
+        <img src="https://images.unsplash.com/photo-1527689368864-3a821dbccc34?q=80&w=900&auto=format&fit=crop" alt="work 1" class="object-cover w-full h-56"/>
+        <figcaption class="absolute bottom-0 left-0 right-0 p-4 text-white bg-gradient-to-t from-black/50 to-transparent">
+          <div class="text-sm font-semibold">Product Explainer</div>
+          <div class="text-xs opacity-80">30s — 2D animation</div>
+        </figcaption>
+      </figure>
+
+      <figure class="relative overflow-hidden transition transform rounded-lg group hover:scale-105">
+        <img src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?q=80&w=900&auto=format&fit=crop" alt="work 2" class="object-cover w-full h-56"/>
+        <figcaption class="absolute bottom-0 left-0 right-0 p-4 text-white bg-gradient-to-t from-black/50 to-transparent">
+          <div class="text-sm font-semibold">Social Promo</div>
+          <div class="text-xs opacity-80">15s — Motion graphics</div>
+        </figcaption>
+      </figure>
+
+      <figure class="relative overflow-hidden transition transform rounded-lg group hover:scale-105">
+        <img src="https://images.unsplash.com/photo-1503602642458-232111445657?q=80&w=900&auto=format&fit=crop" alt="work 3" class="object-cover w-full h-56"/>
+        <figcaption class="absolute bottom-0 left-0 right-0 p-4 text-white bg-gradient-to-t from-black/50 to-transparent">
+          <div class="text-sm font-semibold">Brand Film</div>
+          <div class="text-xs opacity-80">60s — Mixed media</div>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- Testimonials / trust -->
+  <section class="px-6 py-12 mx-auto max-w-7xl">
+    <div class="grid gap-6 p-8 bg-white shadow-lg rounded-2xl md:grid-cols-3">
+      <div class="md:col-span-1">
+        <h4 class="text-lg font-bold">Trusted by product teams</h4>
+        <p class="mt-2 text-slate-600">We help teams ship animation assets that scale across platforms.</p>
+      </div>
+
+      <blockquote class="md:col-span-2 text-slate-700">
+        <p class="italic">“Burma Made helped us create a concise brand film that doubled our landing conversion. Fast, thoughtful, and very collaborative.”</p>
+        <cite class="block mt-4 font-semibold">— Product Lead, Acme Co</cite>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- Contact / CTA -->
+  <section id="contact" class="px-6 py-12 mx-auto max-w-7xl">
+    <div class="items-center gap-8 p-8 rounded-2xl md:flex glass">
+      <div class="flex-1">
+        <h3 class="text-2xl font-bold">Start a project</h3>
+        <p class="mt-2 text-slate-600">Tell us about your timeline, budget, and goals — we’ll propose the best format for your brief.</p>
+        <ul class="mt-4 space-y-2 text-sm">
+          <li>• Free 30-minute discovery call</li>
+          <li>• Flexible delivery & asset ownership</li>
+        </ul>
+      </div>
+
+      <form class="w-full mt-6 md:mt-0 md:w-96" onsubmit="event.preventDefault(); alert('Thanks — we will reach out!')">
+        <label class="block text-xs font-medium">Name</label>
+        <input class="w-full px-3 py-2 mt-2 border rounded-md" placeholder="Your name" required />
+        <label class="block mt-3 text-xs font-medium">Email</label>
+        <input type="email" class="w-full px-3 py-2 mt-2 border rounded-md" placeholder="you@company.com" required />
+        <label class="block mt-3 text-xs font-medium">Message</label>
+        <textarea class="w-full px-3 py-2 mt-2 border rounded-md" rows="4" placeholder="Tell us about your project..."></textarea>
+
+        <div class="flex gap-3 mt-4">
+          <button type="submit" class="px-4 py-2 font-medium rounded-md" style="background:var(--accent); color:white">Send request</button>
+          <a href="mailto:hello@luminamotion.example" class="px-4 py-2 border rounded-md">Email us</a>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="px-6 py-8 mx-auto text-sm max-w-7xl text-slate-600">
+    <div class="flex items-center justify-between">
+      <div>© <strong>Burma Made</strong> — All rights reserved</div>
+      <div class="flex items-center gap-4">
+        <a href="#" class="hover:underline">Privacy</a>
+        <a href="#" class="hover:underline">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Extra: small script to reveal elements on scroll -->
+  <script>
+    // simple reveal-on-scroll for "reveal" class
+    const revealEls = document.querySelectorAll('.reveal');
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if(e.isIntersecting) e.target.style.opacity = 1, e.target.style.transform = 'translateY(0)';
+      });
+    }, {threshold: 0.12});
+    revealEls.forEach(el => io.observe(el));
+
+    // tiny enhancement: slight scale on hover numeric
+    document.querySelectorAll('figure, article').forEach(el => {
+      el.addEventListener('mouseenter', () => el.classList.add('shadow-xl'));
+      el.addEventListener('mouseleave', () => el.classList.remove('shadow-xl'));
+    });
+  </script>
 </body>
 </html>
