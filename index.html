@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -27,13 +27,13 @@
     }
   </script>
 </head>
-<body class="bg-white text-gray-800">
+<body class="text-gray-800 bg-white">
 
 <!-- ========== MAIN CONTENT ========== -->
 <main id="content">
   <div class="overflow-hidden">
         <!-- Header -->
-    <header class="flex flex-wrap md:justify-start md:flex-nowrap z-50 w-full text-sm py-3 md:py-0">
+    <header class="z-50 flex flex-wrap w-full py-3 text-sm md:justify-start md:flex-nowrap md:py-0">
       <nav class="max-w-[85rem] w-full mx-auto px-4 md:px-6 lg:px-8">
         <div class="relative md:flex md:items-center md:justify-between">
           <div class="flex items-center justify-between">
@@ -49,36 +49,44 @@
               </div>
 
               <div class="grow">
-                <p class="md:text-xl text-gray-800 font-semibold dark:text-neutral-200">
+                <p class="font-semibold text-gray-800 md:text-xl dark:text-neutral-200">
                   BurmaMade
                 </p>
-                <p class="text-xs md:text-xs text-gray-800 dark:text-neutral-200">
+                <p class="text-xs text-gray-800 md:text-xs dark:text-neutral-200">
                   Animation Studio & Game Development
                 </p>
               </div>
             </div>
 
             <div class="md:hidden">
-              <button type="button" class="hs-collapse-toggle size-9 flex justify-center items-center text-sm font-semibold rounded-lg border border-gray-200 text-gray-800 hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:border-neutral-800 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700" id="hs-navbar-page-demo-pricing-collapse" aria-expanded="false" aria-controls="hs-navbar-page-demo-pricing" aria-label="Toggle navigation" data-hs-collapse="#hs-navbar-page-demo-pricing">
+              <button type="button" class="flex items-center justify-center text-sm font-semibold text-gray-800 border border-gray-200 rounded-lg hs-collapse-toggle size-9 hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:border-neutral-800 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700" id="hs-navbar-page-demo-pricing-collapse" aria-expanded="false" aria-controls="hs-navbar-page-demo-pricing" aria-label="Toggle navigation" data-hs-collapse="#hs-navbar-page-demo-pricing">
                 <svg class="hs-collapse-open:hidden shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" x2="21" y1="6" y2="6"/><line x1="3" x2="21" y1="12" y2="12"/><line x1="3" x2="21" y1="18" y2="18"/></svg>
-                <svg class="hs-collapse-open:block hidden shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+                <svg class="hidden hs-collapse-open:block shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
               </button>
             </div>
           </div>
 
-          <div id="hs-navbar-page-demo-pricing" class="hidden hs-collapse overflow-hidden transition-all duration-300 basis-full grow md:block" aria-labelledby="hs-navbar-page-demo-pricing-collapse">
+          <div id="hs-navbar-page-demo-pricing" class="hidden overflow-hidden transition-all duration-300 hs-collapse basis-full grow md:block" aria-labelledby="hs-navbar-page-demo-pricing-collapse">
             <div class="overflow-hidden overflow-y-auto max-h-[75vh] [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-track]:bg-gray-100 [&::-webkit-scrollbar-thumb]:bg-gray-300 dark:[&::-webkit-scrollbar-track]:bg-neutral-700 dark:[&::-webkit-scrollbar-thumb]:bg-neutral-500">
-              <div class="flex flex-col gap-x-0 mt-5 divide-y divide-dashed divide-gray-200 md:flex-row md:items-center md:justify-end md:gap-x-7 md:mt-0 md:ps-7 md:divide-y-0 md:divide-solid dark:divide-neutral-700">
-                <a class="py-3 md:py-6 font-medium text-gray-600 hover:text-gray-500 focus:outline-hidden focus:text-gray-500 dark:text-neutral-400 dark:hover:text-neutral-500 dark:focus:text-neutral-500" href="#" aria-current="page">
-                  Landing
+              <div class="flex flex-col mt-5 divide-y divide-gray-200 gap-x-0 divide-dashed md:flex-row md:items-center md:justify-end md:gap-x-7 md:mt-0 md:ps-7 md:divide-y-0 md:divide-solid dark:divide-neutral-700">
+                <a class="py-3 font-medium text-gray-600 md:py-6 hover:text-gray-500 focus:outline-hidden focus:text-gray-500 dark:text-neutral-400 dark:hover:text-neutral-500 dark:focus:text-neutral-500" href="#services" aria-current="page">
+                  Our Services
                 </a>
 
-                <a class="py-3 md:py-6 font-medium text-gray-600 hover:text-gray-500 focus:outline-hidden focus:text-gray-500 dark:text-neutral-400 dark:hover:text-neutral-500 dark:focus:text-neutral-500" href="#">
-                  Company
+                <a class="py-3 font-medium text-gray-600 md:py-6 hover:text-gray-500 focus:outline-hidden focus:text-gray-500 dark:text-neutral-400 dark:hover:text-neutral-500 dark:focus:text-neutral-500" href="#characters">
+                  Our characters
                 </a>
 
-                <div class="hs-dropdown [--strategy:static] md:[--strategy:absolute] [--adaptive:none] md:[--trigger:hover] py-3 md:py-4">
-                  <button id="hs-mega-menu-pdp" type="button" class="flex items-center w-full text-gray-600 hover:text-gray-400 focus:outline-hidden focus:text-gray-400 font-medium dark:text-neutral-400 dark:hover:text-neutral-500 dark:focus:text-neutral-500" aria-haspopup="menu" aria-expanded="false" aria-label="Mega Menu">
+                <a class="py-3 font-medium text-gray-600 md:py-6 hover:text-gray-500 focus:outline-hidden focus:text-gray-500 dark:text-neutral-400 dark:hover:text-neutral-500 dark:focus:text-neutral-500" href="#gallery">
+                  Gallery
+                </a>
+
+                <a class="py-3 font-medium text-gray-600 md:py-6 hover:text-gray-500 focus:outline-hidden focus:text-gray-500 dark:text-neutral-400 dark:hover:text-neutral-500 dark:focus:text-neutral-500" href="#processes">
+                  Processes
+                </a>
+
+                <!-- <div class="hs-dropdown [--strategy:static] md:[--strategy:absolute] [--adaptive:none] md:[--trigger:hover] py-3 md:py-4">
+                  <button id="hs-mega-menu-pdp" type="button" class="flex items-center w-full font-medium text-gray-600 hover:text-gray-400 focus:outline-hidden focus:text-gray-400 dark:text-neutral-400 dark:hover:text-neutral-500 dark:focus:text-neutral-500" aria-haspopup="menu" aria-expanded="false" aria-label="Mega Menu">
                     Resources
                     <svg class="ms-2 size-2.5 text-gray-500 dark:text-neutral-500" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M2 5L8.16086 10.6869C8.35239 10.8637 8.64761 10.8637 8.83914 10.6869L15 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
@@ -86,26 +94,26 @@
                   </button>
 
                   <div class="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] md:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 w-full hidden z-10 top-full start-0 min-w-60 bg-white md:shadow-2xl rounded-lg py-2 md:p-4 dark:bg-neutral-900 dark:divide-neutral-700 before:absolute before:-top-5 before:start-0 before:w-full before:h-5" role="menu" aria-orientation="vertical" aria-labelledby="hs-mega-menu-pdp">
-                    <div class="md:grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <div class="gap-4 md:grid md:grid-cols-2 lg:grid-cols-3">
                       <div class="flex flex-col mx-1 md:mx-0">
-                        <a class="group flex gap-x-5 text-gray-800 hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100 rounded-lg p-4 dark:text-neutral-200 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800" href="#">
-                          <svg class="shrink-0 size-5 mt-1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                        <a class="flex p-4 text-gray-800 rounded-lg group gap-x-5 hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100 dark:text-neutral-200 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800" href="#">
+                          <svg class="mt-1 shrink-0 size-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
                           <div class="grow">
                             <p class="font-medium text-gray-800 dark:text-neutral-200">Support Docs</p>
                             <p class="text-sm text-gray-500 group-hover:text-gray-800 group-focus:text-gray-800 dark:text-neutral-500 dark:group-hover:text-neutral-200 dark:group-focus:text-neutral-200">Explore advice and explanations for all of Preline's features.</p>
                           </div>
                         </a>
 
-                        <a class="group flex gap-x-5 text-gray-800 hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100 rounded-lg p-4 dark:text-neutral-200 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800" href="#">
-                          <svg class="shrink-0 size-5 mt-1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="7" height="7" x="14" y="3" rx="1"/><path d="M10 21V8a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-5a1 1 0 0 0-1-1H3"/></svg>
+                        <a class="flex p-4 text-gray-800 rounded-lg group gap-x-5 hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100 dark:text-neutral-200 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800" href="#">
+                          <svg class="mt-1 shrink-0 size-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="7" height="7" x="14" y="3" rx="1"/><path d="M10 21V8a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-5a1 1 0 0 0-1-1H3"/></svg>
                           <div class="grow">
                             <p class="font-medium text-gray-800 dark:text-neutral-200">Integrations</p>
                             <p class="text-sm text-gray-500 group-hover:text-gray-800 group-focus:text-gray-800 dark:text-neutral-500 dark:group-hover:text-neutral-200 dark:group-focus:text-neutral-200">Discover the huge range of tools that Preline integrates with.</p>
                           </div>
                         </a>
 
-                        <a class="group flex gap-x-5 text-gray-800 hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100 rounded-lg p-4 dark:text-neutral-200 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800" href="#">
-                          <svg class="shrink-0 size-5 mt-1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m7 11 2-2-2-2"/><path d="M11 13h4"/><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/></svg>
+                        <a class="flex p-4 text-gray-800 rounded-lg group gap-x-5 hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100 dark:text-neutral-200 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800" href="#">
+                          <svg class="mt-1 shrink-0 size-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m7 11 2-2-2-2"/><path d="M11 13h4"/><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/></svg>
                           <div class="grow">
                             <p class="font-medium text-gray-800 dark:text-neutral-200">API Reference</p>
                             <p class="text-sm text-gray-500 group-hover:text-gray-800 group-focus:text-gray-800 dark:text-neutral-500 dark:group-hover:text-neutral-200 dark:group-focus:text-neutral-200">Build custom integrations with our first-class API.</p>
@@ -114,24 +122,24 @@
                       </div>
 
                       <div class="flex flex-col mx-1 md:mx-0">
-                        <a class="group flex gap-x-5 text-gray-800 hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100 rounded-lg p-4 dark:text-neutral-200 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800" href="#">
-                          <svg class="shrink-0 size-5 mt-1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>
+                        <a class="flex p-4 text-gray-800 rounded-lg group gap-x-5 hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100 dark:text-neutral-200 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800" href="#">
+                          <svg class="mt-1 shrink-0 size-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>
                           <div class="grow">
                             <p class="font-medium text-gray-800 dark:text-neutral-200">Help Center</p>
                             <p class="text-sm text-gray-500 group-hover:text-gray-800 group-focus:text-gray-800 dark:text-neutral-500 dark:group-hover:text-neutral-200 dark:group-focus:text-neutral-200">Learn how to install, set up, and use Preline.</p>
                           </div>
                         </a>
 
-                        <a class="group flex gap-x-5 text-gray-800 hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100 rounded-lg p-4 dark:text-neutral-200 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800" href="#">
-                          <svg class="shrink-0 size-5 mt-1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-4 8"/></svg>
+                        <a class="flex p-4 text-gray-800 rounded-lg group gap-x-5 hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100 dark:text-neutral-200 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800" href="#">
+                          <svg class="mt-1 shrink-0 size-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-4 8"/></svg>
                           <div class="grow">
                             <p class="font-medium text-gray-800 dark:text-neutral-200">Developer Hub</p>
                             <p class="text-sm text-gray-500 group-hover:text-gray-800 group-focus:text-gray-800 dark:text-neutral-500 dark:group-hover:text-neutral-200 dark:group-focus:text-neutral-200">Learn how to integrate or build on top of Preline.</p>
                           </div>
                         </a>
 
-                        <a class="group flex gap-x-5 text-gray-800 hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100 rounded-lg p-4 dark:text-neutral-200 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800" href="#">
-                          <svg class="shrink-0 size-5 mt-1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                        <a class="flex p-4 text-gray-800 rounded-lg group gap-x-5 hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100 dark:text-neutral-200 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800" href="#">
+                          <svg class="mt-1 shrink-0 size-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
                           <div class="grow">
                             <p class="font-medium text-gray-800 dark:text-neutral-200">Community Forum</p>
                             <p class="text-sm text-gray-500 group-hover:text-gray-800 group-focus:text-gray-800 dark:text-neutral-500 dark:group-hover:text-neutral-200 dark:group-focus:text-neutral-200">Learn, share, and connect with other Preline users.</p>
@@ -139,16 +147,16 @@
                         </a>
                       </div>
 
-                      <div class="flex flex-col pt-4 md:pt-0 mx-1 md:mx-0">
-                        <span class="text-sm font-semibold uppercase text-gray-800 dark:text-neutral-200">Customer stories</span>
+                      <div class="flex flex-col pt-4 mx-1 md:pt-0 md:mx-0">
+                        <span class="text-sm font-semibold text-gray-800 uppercase dark:text-neutral-200">Customer stories</span>
 
-                        <a class="mt-4 group flex gap-x-5 items-center focus:outline-hidden" href="#">
-                          <img class="size-32 rounded-lg" src="https://images.unsplash.com/photo-1648737967328-690548aec14f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=320&q=80" alt="Avatar">
+                        <a class="flex items-center mt-4 group gap-x-5 focus:outline-hidden" href="#">
+                          <img class="rounded-lg size-32" src="https://images.unsplash.com/photo-1648737967328-690548aec14f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=320&q=80" alt="Avatar">
                           <div class="grow">
                             <p class="text-gray-800 dark:text-neutral-200">Preline Projects has proved to be most efficient cloud based project tracking and bug tracking tool.</p>
-                            <p class="mt-3 inline-flex items-center gap-x-2 text-sm font-semibold text-gray-800 dark:text-neutral-200">
+                            <p class="inline-flex items-center mt-3 text-sm font-semibold text-gray-800 gap-x-2 dark:text-neutral-200">
                               Learn more
-                              <svg class="shrink-0 size-4 transition ease-in-out group-hover:translate-x-1 group-focus:translate-x-1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+                              <svg class="transition ease-in-out shrink-0 size-4 group-hover:translate-x-1 group-focus:translate-x-1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
                             </p>
                           </div>
                         </a>
@@ -157,19 +165,15 @@
                   </div>
                 </div>
 
-                <a class="py-3 md:py-6 font-medium text-gray-600 hover:text-gray-500 focus:outline-hidden focus:text-gray-500 dark:text-neutral-400 dark:hover:text-neutral-500 dark:focus:text-neutral-500" href="#">
+                <a class="py-3 font-medium text-gray-600 md:py-6 hover:text-gray-500 focus:outline-hidden focus:text-gray-500 dark:text-neutral-400 dark:hover:text-neutral-500 dark:focus:text-neutral-500" href="#">
                   Login
-                </a>
+                </a> -->
 
                 <div class="pt-3 md:pt-0">
                   <a
-                    href="#"
-                    class="py-2 px-3 md:py-3 md:px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-full
-                          bg-black text-white
-                          hover:bg-gray-900
-                          focus:outline-none focus:ring-2 focus:ring-gray-800
-                          disabled:opacity-50 disabled:pointer-events-none">
-                    Request demo
+                    href="#contact"
+                    class="inline-flex items-center px-3 py-2 text-sm font-medium text-white bg-black rounded-full md:py-3 md:px-4 gap-x-2 hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-800 disabled:opacity-50 disabled:pointer-events-none">
+                    Contact Us
                   </a>
                 </div>
               </div>
@@ -180,28 +184,24 @@
     </header>
     <!-- End Header -->
 
-
+<section class="px-6 py-20 font-sans bg-white">
 <!-- Hero -->
 <div class="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8">
   <!-- Grid -->
-  <div class="grid md:grid-cols-2 gap-4 md:gap-8 xl:gap-20 md:items-center">
+  <div class="grid gap-4 md:grid-cols-2 md:gap-8 xl:gap-20 md:items-center">
     <div>
-      <h1 class="block text-3xl font-bold text-gray-800 sm:text-4xl lg:text-6xl lg:leading-tight dark:text-white">We Build Digital Worlds.</h1>
-      <p class="mt-3 text-lg text-gray-800 dark:text-neutral-400">Whether it’s an animated short, a realistic product model, or an interactive game, we bring your vision to life with precision and motion.</p>
-      <p class="mt-6 text-lg text-gray-800 dark:text-neutral-400">အန်နီမေးရှင်း ဇာတ်လမ်းတိုများ၊ ထုတ်ကုန်ပုံစံငယ်များ သို့မဟုတ်  ဂိမ်းများပင် ဖြစ်စေကာမူ၊ သင်၏ စိတ်ကူးအမြင်များကို ကျွန်ုပ်တို့က အသက်သွင်း ပုံဖော်ပေးပါသည်။</p>
+      <h1 class="block text-3xl font-bold text-gray-800 sm:text-4xl lg:text-6xl lg:leading-tight dark:text-white">We Build  <span class="text-[#ff4d00]">Digital Worlds</span>.</h1>
+      <p class="mt-3 text-lg text-gray-800 dark:text-neutral-400">We animate and design the animated short stories, product mockups, and games you want to create for your business.</p>
+      <p class="mt-6 text-lg text-gray-800 dark:text-neutral-400">လူကြီးမင်းတို့လုပ်ငန်းအတွက် ဖန်တီးလိုသော အန်နီမေးရှင်းဇာတ်လမ်းတိုများ၊ ထုတ်ကုန်ပုံစံငယ်များ၊ ဂိမ်းများကို ကျွန်ုပ်တို့က အသက်သွင်း ပုံဖော်ပေးပါသည်။</p>
       <!-- Buttons -->
-      <div class="mt-7 grid gap-3 w-full sm:inline-flex">
+      <div class="grid w-full gap-3 mt-7 sm:inline-flex">
         <a
           href="#"
-          class="py-2 px-3 md:py-3 md:px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-full
-                bg-black text-white
-                hover:bg-gray-900
-                focus:outline-none focus:ring-2 focus:ring-gray-800
-                disabled:opacity-50 disabled:pointer-events-none">
+          class="inline-flex items-center px-3 py-2 text-sm font-medium text-white bg-black rounded-full md:py-3 md:px-4 gap-x-2 hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-800 disabled:opacity-50 disabled:pointer-events-none">
           Explore Our Services
           <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
         </a>
-        <!-- <a class="py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-2xs hover:bg-gray-50 focus:outline-hidden focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800 dark:focus:bg-neutral-800" href="#">
+        <!-- <a class="inline-flex items-center justify-center px-4 py-3 text-sm font-medium text-gray-800 bg-white border border-gray-200 rounded-lg gap-x-2 shadow-2xs hover:bg-gray-50 focus:outline-hidden focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800 dark:focus:bg-neutral-800" href="#">
           Contact sales team
         </a> -->
       </div>
@@ -212,11 +212,11 @@
 
     <div class="relative ms-4">
       <img class="w-full rounded-md" src="./images/image-04.png" alt="Hero Image">
-      <div class="absolute inset-0 -z-1 bg-linear-to-tr from-gray-200 via-white/0 to-white/0 size-full rounded-md mt-4 -mb-4 me-4 -ms-4 lg:mt-6 lg:-mb-6 lg:me-6 lg:-ms-6 dark:from-neutral-800 dark:via-neutral-900/0 dark:to-neutral-900/0"></div>
+      <div class="absolute inset-0 mt-4 -mb-4 rounded-md -z-1 bg-linear-to-tr from-gray-200 via-white/0 to-white/0 size-full me-4 -ms-4 lg:mt-6 lg:-mb-6 lg:me-6 lg:-ms-6 dark:from-neutral-800 dark:via-neutral-900/0 dark:to-neutral-900/0"></div>
 
       <!-- SVG-->
       <div class="absolute bottom-0 start-0">
-        <svg class="w-2/3 ms-auto h-auto text-white dark:text-neutral-900" width="630" height="451" viewBox="0 0 630 451" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="w-2/3 h-auto text-white ms-auto dark:text-neutral-900" width="630" height="451" viewBox="0 0 630 451" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect x="531" y="352" width="99" height="99" fill="currentColor"/>
           <rect x="140" y="352" width="106" height="99" fill="currentColor"/>
           <rect x="482" y="402" width="64" height="49" fill="currentColor"/>
@@ -243,29 +243,44 @@
   <!-- End Grid -->
 </div>
 <!-- End Hero -->
+</section>
 
-<div class="max-w-6xl px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
-  <!-- Masonry Cards -->
-  <div class="max-w-6xl px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
-    <div class="mx-auto max-w-2xl mb-8 lg:mb-14 text-center">
-      <h2 class="text-3xl lg:text-4xl text-gray-800 font-bold dark:text-neutral-200">
+
+
+
+
+<section id="services" class="px-6 py-10 font-sans bg-white">
+  <div class="max-w-6xl px-4 py-10 mx-auto sm:px-6 lg:px-8 lg:py-14">
+    <!-- <div class="max-w-2xl mx-auto mb-8 text-center lg:mb-14">
+      <h2 class="text-3xl font-bold text-gray-800 lg:text-4xl dark:text-neutral-200">
         Our Services
       </h2>
       <p class="mt-3 text-gray-800 dark:text-neutral-200">
         The powerful and flexible theme for all kinds of businesses.
       </p>
+    </div> -->
+    <div class="max-w-2xl mx-auto mb-10 text-center lg:mb-14">
+      <!-- <h2 class="text-2xl font-bold md:text-4xl md:leading-tight dark:text-white">The Gallery</h2>
+      <p class="mt-1 text-gray-600 dark:text-neutral-400">ကျွန်ုပ်တို့၏ ဖန်တီးမှုများ</p> -->
+
+      <h2 class="mb-4 text-4xl font-bold md:text-5xl">
+          Our <span class="text-[#ff4d00]">reliable</span> services 
+      </h2>
+      <p class="mb-12 text-lg text-gray-400">ကျွန်ုပ်တို့၏ယုံကြည်စိတ်ချရသောဝန်ဆောင်မှုများ</p>
+
+
     </div>
     <!-- Grid -->
-    <div class="grid sm:grid-cols-12 gap-6">
-      <div class="sm:self-end col-span-12 sm:col-span-7 md:col-span-8 lg:col-span-5 lg:col-start-3">
+    <div class="grid gap-6 sm:grid-cols-12">
+      <div class="col-span-12 sm:self-end sm:col-span-7 md:col-span-8 lg:col-span-5 lg:col-start-3">
         <!-- Card -->
-        <a class="group relative block rounded-xl overflow-hidden focus:outline-hidden" href="#">
-          <div class="aspect-w-12 aspect-h-7 sm:aspect-none rounded-xl overflow-hidden">
-            <img class="group-hover:scale-105 group-focus:scale-105 transition-transform duration-500 ease-in-out rounded-xl w-full object-cover" src="./images/image-01.png" alt="Masonry Cards Image">
+        <a class="relative block overflow-hidden group rounded-xl focus:outline-hidden" href="#">
+          <div class="overflow-hidden aspect-w-12 aspect-h-7 sm:aspect-none rounded-xl">
+            <img class="object-cover w-full transition-transform duration-500 ease-in-out group-hover:scale-105 group-focus:scale-105 rounded-xl" src="./images/image-01.png" alt="Masonry Cards Image">
           </div>
-          <div class="absolute bottom-0 start-0 end-0 p-2 sm:p-4">
-            <div class="text-sm font-semibold text-gray-800 rounded-lg bg-white p-4 md:text-xl dark:bg-neutral-800 dark:text-neutral-200">
-              Animated short movie <br/><span class="text-gray-600 text-sm">အန်နီမေးရှင်း ဇာတ်လမ်းတိုများ</span>
+          <div class="absolute bottom-0 p-2 start-0 end-0 sm:p-4">
+            <div class="p-4 text-sm font-semibold text-gray-800 bg-white rounded-lg md:text-xl dark:bg-neutral-800 dark:text-neutral-200">
+              Animated short movie <br/><span class="text-sm text-gray-600">အန်နီမေးရှင်း ဇာတ်လမ်းတိုများ</span>
             </div>
           </div>
         </a>
@@ -273,15 +288,15 @@
       </div>
       <!-- End Col -->
 
-      <div class="sm:self-end col-span-12 sm:col-span-5 md:col-span-4 lg:col-span-3">
+      <div class="col-span-12 sm:self-end sm:col-span-5 md:col-span-4 lg:col-span-3">
         <!-- Card -->
-        <a class="group relative block rounded-xl overflow-hidden focus:outline-hidden" href="#">
-          <div class="aspect-w-12 aspect-h-7 sm:aspect-none rounded-xl overflow-hidden">
-            <img class="group-hover:scale-105 group-focus:scale-105 transition-transform duration-500 ease-in-out rounded-xl w-full object-cover" src="https://images.unsplash.com/photo-1605629921711-2f6b00c6bbf4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=560&q=80" alt="Masonry Cards Image">
+        <a class="relative block overflow-hidden group rounded-xl focus:outline-hidden" href="#">
+          <div class="overflow-hidden aspect-w-12 aspect-h-7 sm:aspect-none rounded-xl">
+            <img class="object-cover w-full transition-transform duration-500 ease-in-out group-hover:scale-105 group-focus:scale-105 rounded-xl" src="https://images.unsplash.com/photo-1605629921711-2f6b00c6bbf4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=560&q=80" alt="Masonry Cards Image">
           </div>
-          <div class="absolute bottom-0 start-0 end-0 p-2 sm:p-4">
-            <div class="text-sm font-semibold text-gray-800 rounded-lg bg-white p-4 md:text-xl dark:bg-neutral-800 dark:text-neutral-200">
-              High-end product modeling  <br/><span class="text-gray-600 text-sm">လက်တွေ့ကျသော ထုတ်ကုန်ပုံစံငယ်များ</span>
+          <div class="absolute bottom-0 p-2 start-0 end-0 sm:p-4">
+            <div class="p-4 text-sm font-semibold text-gray-800 bg-white rounded-lg md:text-xl dark:bg-neutral-800 dark:text-neutral-200">
+              High-end product modeling  <br/><span class="text-sm text-gray-600">လက်တွေ့ကျသော ထုတ်ကုန်ပုံစံငယ်များ</span>
             </div>
           </div>
         </a>
@@ -291,13 +306,13 @@
 
       <div class="col-span-12 md:col-span-4">
         <!-- Card -->
-        <a class="group relative block rounded-xl overflow-hidden focus:outline-hidden" href="#">
-          <div class="aspect-w-12 aspect-h-7 sm:aspect-none rounded-xl overflow-hidden">
-            <img class="group-hover:scale-105 group-focus:scale-105 transition-transform duration-500 ease-in-out rounded-xl w-full object-cover" src="https://images.unsplash.com/photo-1606836576983-8b458e75221d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=560&q=80" alt="Masonry Cards Image">
+        <a class="relative block overflow-hidden group rounded-xl focus:outline-hidden" href="#">
+          <div class="overflow-hidden aspect-w-12 aspect-h-7 sm:aspect-none rounded-xl">
+            <img class="object-cover w-full transition-transform duration-500 ease-in-out group-hover:scale-105 group-focus:scale-105 rounded-xl" src="https://images.unsplash.com/photo-1606836576983-8b458e75221d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=560&q=80" alt="Masonry Cards Image">
           </div>
-          <div class="absolute bottom-0 start-0 end-0 p-2 sm:p-4">
-            <div class="text-sm font-semibold text-gray-800 rounded-lg bg-white p-4 md:text-xl dark:bg-neutral-800 dark:text-neutral-200">
-              Motion graphics <br/><span class="text-gray-600 text-sm">လှုပ်ရှားသက်ဝင်သော ရုပ်ပုံအနုပညာ</span>
+          <div class="absolute bottom-0 p-2 start-0 end-0 sm:p-4">
+            <div class="p-4 text-sm font-semibold text-gray-800 bg-white rounded-lg md:text-xl dark:bg-neutral-800 dark:text-neutral-200">
+              Motion graphics <br/><span class="text-sm text-gray-600">လှုပ်ရှားသက်ဝင်သော ရုပ်ပုံအနုပညာ</span>
             </div>
           </div>
         </a>
@@ -307,13 +322,13 @@
 
       <div class="col-span-12 sm:col-span-6 md:col-span-4">
         <!-- Card -->
-        <a class="group relative block rounded-xl overflow-hidden focus:outline-hidden" href="#">
-          <div class="aspect-w-12 aspect-h-7 sm:aspect-none rounded-xl overflow-hidden">
-            <img class="group-hover:scale-105 group-focus:scale-105 transition-transform duration-500 ease-in-out rounded-xl w-full object-cover" src="./images/image-04.png" alt="Masonry Cards Image">
+        <a class="relative block overflow-hidden group rounded-xl focus:outline-hidden" href="#">
+          <div class="overflow-hidden aspect-w-12 aspect-h-7 sm:aspect-none rounded-xl">
+            <img class="object-cover w-full transition-transform duration-500 ease-in-out group-hover:scale-105 group-focus:scale-105 rounded-xl" src="./images/image-04.png" alt="Masonry Cards Image">
           </div>
-          <div class="absolute bottom-0 start-0 end-0 p-2 sm:p-4">
-            <div class="text-sm font-semibold text-gray-800 rounded-lg bg-white p-4 md:text-xl dark:bg-neutral-800 dark:text-neutral-200">
-              Character modeling and rigging <br/><span class="text-gray-600 text-sm">ကာရိုက်တာ မော်ဒယ်လ်ပြုလုပ်ခြင်း အရိုးအဆစ် တည်ဆောက်ခြင်း</span>
+          <div class="absolute bottom-0 p-2 start-0 end-0 sm:p-4">
+            <div class="p-4 text-sm font-semibold text-gray-800 bg-white rounded-lg md:text-xl dark:bg-neutral-800 dark:text-neutral-200">
+              Character modeling and rigging <br/><span class="text-sm text-gray-600">ကာရိုက်တာ မော်ဒယ်လ်ပြုလုပ်ခြင်း အရိုးအဆစ် တည်ဆောက်ခြင်း</span>
             </div>
           </div>
         </a>
@@ -323,13 +338,13 @@
 
       <div class="col-span-12 sm:col-span-6 md:col-span-4">
         <!-- Card -->
-        <a class="group relative block rounded-xl overflow-hidden focus:outline-hidden" href="#">
-          <div class="aspect-w-12 aspect-h-7 sm:aspect-none rounded-xl overflow-hidden">
-            <img class="group-hover:scale-105 group-focus:scale-105 transition-transform duration-500 ease-in-out rounded-xl w-full object-cover" src="https://images.unsplash.com/photo-1467043153537-a4fba2cd39ef?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=560&q=80" alt="Masonry Cards Image">
+        <a class="relative block overflow-hidden group rounded-xl focus:outline-hidden" href="#">
+          <div class="overflow-hidden aspect-w-12 aspect-h-7 sm:aspect-none rounded-xl">
+            <img class="object-cover w-full transition-transform duration-500 ease-in-out group-hover:scale-105 group-focus:scale-105 rounded-xl" src="https://images.unsplash.com/photo-1467043153537-a4fba2cd39ef?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=560&q=80" alt="Masonry Cards Image">
           </div>
-          <div class="absolute bottom-0 start-0 end-0 p-2 sm:p-4">
-            <div class="text-sm font-semibold text-gray-800 rounded-lg bg-white p-4 md:text-xl dark:bg-neutral-800 dark:text-neutral-200">
-              Game character design <br/><span class="text-gray-600 text-sm">ဂိမ်း ဇာတ်ကောင် ဒီဇိုင်းများ</span>
+          <div class="absolute bottom-0 p-2 start-0 end-0 sm:p-4">
+            <div class="p-4 text-sm font-semibold text-gray-800 bg-white rounded-lg md:text-xl dark:bg-neutral-800 dark:text-neutral-200">
+              Game character design <br/><span class="text-sm text-gray-600">ဂိမ်း ဇာတ်ကောင် ဒီဇိုင်းများ</span>
             </div>
           </div>
         </a>
@@ -339,338 +354,318 @@
     </div>
     <!-- End Grid -->
   </div>
-  <!-- End Masonry Cards -->
-</div>
+</section>    
 
-<div class="max-w-6xl px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
-  <!-- Card Blog -->
-  <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
-    <!-- Title -->
-    <div class="max-w-2xl mx-auto text-center mb-10 lg:mb-14">
-      <h2 class="text-2xl font-bold md:text-4xl md:leading-tight dark:text-white">The Gallery</h2>
-      <p class="mt-1 text-gray-600 dark:text-neutral-400">ကျွန်ုပ်တို့၏ ဖန်တီးမှုများ</p>
-    </div>
-    <!-- End Title -->
 
-    <!-- Grid -->
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      <!-- Card -->
-      <a class="group flex flex-col focus:outline-hidden" href="https://www.youtube.com/watch?v=j39ke9fOsHE" target="_blank">
-        <div class="relative pt-[50%] sm:pt-[70%] rounded-xl overflow-hidden">
-          <img class="size-full absolute top-0 start-0 object-cover group-hover:scale-105 group-focus:scale-105 transition-transform duration-500 ease-in-out rounded-xl" src="./images/image-02.png" alt="Blog Image">
-          
-          <div class="absolute inset-0 flex items-center justify-center">
-            <div class="size-14 flex items-center justify-center bg-white/90 text-red-600 rounded-full shadow-lg group-hover:bg-red-600 group-hover:text-white transition-colors duration-300">
-              <svg class="ms-1 size-6" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
-                <path d="M11.596 8.697l-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/>
-              </svg>
-            </div>
+
+
+<section id="characters" class="px-6 py-10 font-sans bg-white">
+  <div class="max-w-6xl px-4 py-10 mx-auto text-center sm:px-6 lg:px-8 lg:py-14">
+      <h2 class="mb-4 text-4xl font-bold text-black md:text-5xl">
+          You may know <span class="text-[#ff4d00]">our characters</span>
+      </h2>
+      <p class="mb-12 text-lg text-gray-400">ကျွန်တော်တို့ရဲ့ဇာတ်ကောင်တွေ</p>
+      
+      <div class="grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-8">
+          <div class="rounded-[2.5rem] overflow-hidden shadow-lg transform hover:scale-105 transition duration-300">
+              <img src="./images/image-01.png" alt="Book" class="object-cover w-full aspect-square">
           </div>
-
-          <span class="absolute top-0 end-0 rounded-se-xl rounded-es-xl text-xs font-medium bg-gray-800 text-white py-1.5 px-3 dark:bg-neutral-900">
-            Sponsored
-          </span>
-        </div>
-
-        <div class="mt-7">
-          <h3 class="text-xl font-semibold text-gray-800 group-hover:text-gray-600 dark:text-neutral-300 dark:group-hover:text-white">
-            သင့်ကလေး အားဖြည့်အချိုရည် သောက်နေလား? စိတ်ပိုင်းဆိုင်ရာ ထိခိုက်နိုင်ခြေ
-          </h3>
-          <p class="mt-3 text-gray-800 dark:text-neutral-200">
-            Produce professional, reliable streams easily leveraging Preline's innovative broadcast studio
-          </p>
-          <p class="mt-5 inline-flex items-center gap-x-1 text-sm text-blue-600 decoration-2 group-hover:underline group-focus:underline font-medium dark:text-blue-500">
-            Watch Video
-            <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
-          </p>
-        </div>
-      </a>
-      <!-- End Card -->
-
-      <!-- Card -->
-      <a class="group flex flex-col focus:outline-hidden" href="https://www.youtube.com/watch?v=Y1FyVlAxo7Q" target="_blank">
-        <div class="relative pt-[50%] sm:pt-[70%] rounded-xl overflow-hidden">
-          <img class="size-full absolute top-0 start-0 object-cover group-hover:scale-105 group-focus:scale-105 transition-transform duration-500 ease-in-out rounded-xl" src="./images/image-01.png" alt="Blog Image">
-          
-          <div class="absolute inset-0 flex items-center justify-center">
-            <div class="size-14 flex items-center justify-center bg-white/90 text-red-600 rounded-full shadow-lg group-hover:bg-red-600 group-hover:text-white transition-colors duration-300">
-              <svg class="ms-1 size-6" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
-                <path d="M11.596 8.697l-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/>
-              </svg>
-            </div>
+          <div class="rounded-[2.5rem] overflow-hidden shadow-lg transform hover:scale-105 transition duration-300">
+              <img src="./images/image-02.png" alt="Book" class="object-cover w-full aspect-square">
           </div>
-
-          <span class="absolute top-0 end-0 rounded-se-xl rounded-es-xl text-xs font-medium bg-gray-800 text-white py-1.5 px-3 dark:bg-neutral-900">
-            Sponsored
-          </span>
-        </div>
-
-        <div class="mt-7">
-          <h3 class="text-xl font-semibold text-gray-800 group-hover:text-gray-600 dark:text-neutral-300 dark:group-hover:text-white">
-            Life is not same for everyone
-          </h3>
-          <p class="mt-3 text-gray-800 dark:text-neutral-200">
-            Produce professional, reliable streams easily leveraging Preline's innovative broadcast studio
-          </p>
-          <p class="mt-5 inline-flex items-center gap-x-1 text-sm text-blue-600 decoration-2 group-hover:underline group-focus:underline font-medium dark:text-blue-500">
-            Watch Video
-            <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
-          </p>
-        </div>
-      </a>
-      <!-- End Card -->
-
-      <!-- Card -->
-      <a class="group relative flex flex-col w-full min-h-60 bg-[url('https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=560&q=80')] bg-center bg-cover rounded-xl hover:shadow-lg focus:outline-hidden focus:shadow-lg transition" href="#">
-        <div class="flex-auto p-4 md:p-6">
-          <h3 class="text-xl text-white/90 group-hover:text-white"><span class="font-bold">Preline</span> Press publishes books about economic and technological advancement.</h3>
-        </div>
-        <div class="pt-0 p-4 md:p-6">
-          <div class="inline-flex items-center gap-2 text-sm font-medium text-white group-hover:text-white/70 group-focus:text-white/70">
-            Visit the site
-            <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+          <div class="rounded-[2.5rem] overflow-hidden shadow-lg transform hover:scale-105 transition duration-300">
+              <img src="./images/image-03.png" alt="Book" class="object-cover w-full aspect-square">
           </div>
-        </div>
-      </a>
-      <!-- End Card -->
-    </div>
-    <!-- End Grid -->
-  </div>
-  <!-- End Card Blog -->
-</div>
-
-
-<!-- Card Blog -->
-<div class="max-w-6xl px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
-  <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
-    <!-- Grid -->
-    <div class="grid lg:grid-cols-2 lg:gap-y-16 gap-10">
-      <!-- Card -->
-      <a class="group block rounded-xl overflow-hidden focus:outline-hidden" href="#">
-        <div class="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-5">
-          <div class="shrink-0 relative rounded-xl overflow-hidden w-full sm:w-56 h-44">
-            <img class="group-hover:scale-105 group-focus:scale-105 transition-transform duration-500 ease-in-out size-full absolute top-0 start-0 object-cover rounded-xl" src="https://images.unsplash.com/photo-1540575861501-7cf05a4b125a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&q=80" alt="Blog Image">
+          <div class="rounded-[2.5rem] overflow-hidden shadow-lg transform hover:scale-105 transition duration-300">
+              <img src="./images/image-04.png" alt="Book" class="object-cover w-full aspect-square">
           </div>
-
-          <div class="grow">
-            <h3 class="text-xl font-semibold text-gray-800 group-hover:text-gray-600 dark:text-neutral-300 dark:group-hover:text-white">
-              Studio by Preline
-            </h3>
-            <p class="mt-3 text-gray-600 dark:text-neutral-400">
-              Produce professional, reliable streams easily leveraging Preline's innovative broadcast studio
-            </p>
-            <p class="mt-4 inline-flex items-center gap-x-1 text-sm text-blue-600 decoration-2 group-hover:underline group-focus:underline font-medium dark:text-blue-500">
-              Read more
-              <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
-            </p>
+          <div class="rounded-[2.5rem] overflow-hidden shadow-lg transform hover:scale-105 transition duration-300">
+              <img src="./images/image-05.png" alt="Book" class="object-cover w-full aspect-square">
           </div>
-        </div>
-      </a>
-      <!-- End Card -->
-
-      <!-- Card -->
-      <a class="group block rounded-xl overflow-hidden focus:outline-hidden" href="#">
-        <div class="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-5">
-          <div class="shrink-0 relative rounded-xl overflow-hidden w-full sm:w-56 h-44">
-            <img class="group-hover:scale-105 group-focus:scale-105 transition-transform duration-500 ease-in-out size-full absolute top-0 start-0 object-cover rounded-xl" src="https://images.unsplash.com/photo-1668906093328-99601a1aa584?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&q=80" alt="Blog Image">
+          <div class="rounded-[2.5rem] overflow-hidden shadow-lg transform hover:scale-105 transition duration-300">
+              <img src="./images/image-06.png" alt="Book" class="object-cover w-full aspect-square">
           </div>
-
-          <div class="grow">
-            <h3 class="text-xl font-semibold text-gray-800 group-hover:text-gray-600 dark:text-neutral-300 dark:group-hover:text-white">
-              Onsite
-            </h3>
-            <p class="mt-3 text-gray-600 dark:text-neutral-400">
-              Optimize your in-person experience with best-in-class capabilities like badge printing and lead retrieval
-            </p>
-            <p class="mt-4 inline-flex items-center gap-x-1 text-sm text-blue-600 decoration-2 group-hover:underline group-focus:underline font-medium dark:text-blue-500">
-              Read more
-              <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
-            </p>
+          <div class="rounded-[2.5rem] overflow-hidden shadow-lg transform hover:scale-105 transition duration-300">
+              <img src="./images/image-07.png" alt="Book" class="object-cover w-full aspect-square">
           </div>
-        </div>
-      </a>
-      <!-- End Card -->
-
-      <!-- Card -->
-      <a class="group block rounded-xl overflow-hidden focus:outline-hidden" href="#">
-        <div class="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-5">
-          <div class="shrink-0 relative rounded-xl overflow-hidden w-full sm:w-56 h-44">
-            <img class="group-hover:scale-105 group-focus:scale-105 transition-transform duration-500 ease-in-out size-full absolute top-0 start-0 object-cover rounded-xl" src="https://images.unsplash.com/photo-1567016526105-22da7c13161a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&q=80" alt="Blog Image">
+          <div class="rounded-[2.5rem] overflow-hidden shadow-lg transform hover:scale-105 transition duration-300">
+              <img src="./images/image-08.png" alt="Book" class="object-cover w-full aspect-square">
           </div>
-
-          <div class="grow">
-            <h3 class="text-xl font-semibold text-gray-800 group-hover:text-gray-600 dark:text-neutral-300 dark:group-hover:text-white">
-              The complete guide to OKRs
-            </h3>
-            <p class="mt-3 text-gray-600 dark:text-neutral-400">
-              How to make objectives and key results work for your company
-            </p>
-            <p class="mt-4 inline-flex items-center gap-x-1 text-sm text-blue-600 decoration-2 group-hover:underline group-focus:underline font-medium dark:text-blue-500">
-              Read more
-              <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
-            </p>
-          </div>
-        </div>
-      </a>
-      <!-- End Card -->
-
-      <!-- Card -->
-      <a class="group block rounded-xl overflow-hidden focus:outline-hidden" href="#">
-        <div class="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-5">
-          <div class="shrink-0 relative rounded-xl overflow-hidden w-full sm:w-56 h-44">
-            <img class="group-hover:scale-105 group-focus:scale-105 transition-transform duration-500 ease-in-out size-full absolute top-0 start-0 object-cover rounded-xl" src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&q=80" alt="Blog Image">
-          </div>
-
-          <div class="grow">
-            <h3 class="text-xl font-semibold text-gray-800 group-hover:text-gray-600 dark:text-neutral-300 dark:group-hover:text-white">
-              People program models
-            </h3>
-            <p class="mt-3 text-gray-600 dark:text-neutral-400">
-              Six approaches to bringing your People strategy to life
-            </p>
-            <p class="mt-4 inline-flex items-center gap-x-1 text-sm text-blue-600 decoration-2 group-hover:underline group-focus:underline font-medium dark:text-blue-500">
-              Read more
-              <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
-            </p>
-          </div>
-        </div>
-      </a>
-      <!-- End Card -->
-    </div>
-    <!-- End Grid -->
-  </div>
-  <!-- End Card Blog -->
-</div>
-
-
-
-<div class="max-w-6xl px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
-  <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
-    <img class="w-full size-40 object-cover" src="./images/image-01.png" alt="Gallery Image">
-    <img class="w-full size-40 object-cover" src="./images/image-02.png" alt="Gallery Image">
-    <img class="w-full size-40 object-cover" src="https://images.unsplash.com/photo-1567016526105-22da7c13161a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=560&q=80" alt="Gallery Image">
-    <img class="w-full size-40 object-cover" src="https://images.unsplash.com/photo-1668584054131-d5721c515211?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=560&q=80" alt="Gallery Image">
-    <img class="w-full size-40 object-cover" src="https://images.unsplash.com/photo-1664574654529-b60630f33fdb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=560&q=80" alt="Gallery Image">
-    <img class="w-full size-40 object-cover" src="https://images.unsplash.com/photo-1669824774762-65ddf29bee56?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=560&q=80" alt="Gallery Image">
-    <img class="w-full size-40 object-cover" src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=560&q=80" alt="Gallery Image">
-    <img class="w-full size-40 object-cover" src="https://images.unsplash.com/photo-1586232702178-f044c5f4d4b7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=560&q=80" alt="Gallery Image">
-    <img class="w-full size-40 object-cover" src="https://images.unsplash.com/photo-1542125387-c71274d94f0a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=560&q=80" alt="Gallery Image">
-    <img class="w-full size-40 object-cover" src="https://images.unsplash.com/photo-1668869713519-9bcbb0da7171?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=560&q=80" alt="Gallery Image">
-    <img class="w-full size-40 object-cover" src="https://images.unsplash.com/photo-1668584054035-f5ba7d426401?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=560&q=80" alt="Gallery Image">
-    <img class="w-full size-40 object-cover" src="https://images.unsplash.com/photo-1668863699009-1e3b4118675d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=560&q=80" alt="Gallery Image">
-  </div>
-</div>
-
-
-<div class="max-w-6xl px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
-<!-- Features -->
-<div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
-  <!-- Grid -->
-  <div class="lg:grid lg:grid-cols-12 lg:gap-16 lg:items-center">
-    <div class="lg:col-span-7">
-      <!-- Grid -->
-      <div class="grid grid-cols-12 gap-2 sm:gap-6 items-center lg:-translate-x-10">
-        <div class="col-span-4">
-          <img class="rounded-xl" src="./images/image-07.png" alt="Features Image">
-        </div>
-        <!-- End Col -->
-
-        <div class="col-span-3">
-          <img class="rounded-xl" src="./images/image-04.png" alt="Features Image">
-        </div>
-        <!-- End Col -->
-
-        <div class="col-span-5">
-          <img class="rounded-xl" src="./images/image-05.png" alt="Features Image">
-        </div>
-        <!-- End Col -->
       </div>
-      <!-- End Grid -->
-    </div>
-    <!-- End Col -->
+  </div>
+</section>
 
+
+
+<section id="gallery" class="px-6 py-10 font-sans bg-white">
+  <div class="max-w-6xl px-4 mx-auto sm:px-6 lg:px-8 lg:py-14">
     
-    <div class="mt-5 sm:mt-10 lg:mt-0 lg:col-span-5">
-      <div class="space-y-6 sm:space-y-8">
-        <!-- Title -->
-        <div class="space-y-2 md:space-y-4">
-          <h2 class="font-bold text-3xl lg:text-4xl text-gray-800 dark:text-neutral-200">
-            Collaborative tools to design user experience
-          </h2>
-          <p class="text-gray-500 dark:text-neutral-500">
-            Use our tools to explore your ideas and make your vision come true. Then share your work easily.
+    <div class="max-w-2xl mx-auto mb-10 text-center lg:mb-14">
+      <h2 class="mb-4 text-4xl font-bold text-black md:text-5xl ">
+          The <span class="text-[#ff4d00]">Gallery</span>
+      </h2>
+      <p class="mb-12 text-lg text-gray-400">ကျွန်ုပ်တို့၏ ဖန်တီးမှုများ</p>
+    </div>
+
+    <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      
+      <a class="flex flex-col group focus:outline-none" href="https://www.youtube.com/watch?v=7vem7aFHxK0" target="_blank">
+        <div class="relative pt-[56.25%] rounded-xl overflow-hidden bg-gray-100">
+          <img class="absolute top-0 start-0 size-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105" src="./images/image-08.png" alt="Gallery Image">
+          
+          <div class="absolute inset-0 flex items-center justify-center">
+            <div class="flex items-center justify-center text-red-600 transition-colors duration-300 rounded-full shadow-lg size-14 bg-white/90 group-hover:bg-red-600 group-hover:text-white">
+              <svg class="ms-1 size-6" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M11.596 8.697l-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/>
+              </svg>
+            </div>
+          </div>
+          <span class="absolute top-0 end-0 rounded-se-xl rounded-es-xl text-xs font-medium bg-red-600 text-white py-1.5 px-3">YouTube</span>
+        </div>
+        <div class="mt-5">
+          <h3 class="text-xl font-semibold text-black group-hover:text-[#ff4d00]">ချမ်းသာချင်သူတိုင်း မွေးမြူသင့်တဲ့ မီလျံနာ အလေ့အထ (၅) ခု</h3>
+          <p class="mt-2 text-gray-500">ဒီအချက်တွေသိထားရင် သင်လည်းမီလီယံနာတစ်ယောက်ဖြစ်နိုင်ပါတယ်</p>
+        </div>
+      </a>
+
+      <a class="flex flex-col group focus:outline-none" href="https://www.youtube.com/watch?v=SlEoA1r4W0M" target="_blank">
+        <div class="relative pt-[56.25%] rounded-xl overflow-hidden bg-gray-100">
+          <img class="absolute top-0 start-0 size-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105" src="./images/image-06.png" alt="Gallery Image">
+          
+          <div class="absolute inset-0 flex items-center justify-center">
+            <div class="flex items-center justify-center text-red-600 transition-colors duration-300 rounded-full shadow-lg size-14 bg-white/90 group-hover:bg-red-600 group-hover:text-white">
+              <svg class="ms-1 size-6" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M11.596 8.697l-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/>
+              </svg>
+            </div>
+          </div>
+          <span class="absolute top-0 end-0 rounded-se-xl rounded-es-xl text-xs font-medium bg-red-600 text-white py-1.5 px-3">YouTube</span>
+        </div>
+        <div class="mt-5">
+          <h3 class="text-xl font-semibold text-black group-hover:text-[#ff4d00]">အရက်နဲ့ စွမ်းအားဖြည့် အချိုရည်တွေ ရောမသောက်ပါနဲ့</h3>
+          <p class="mt-2 text-gray-500">အရက်နဲ့ စွမ်းအားဖြည့် အချိုရည်တွေ ရောမသောက်ပါနဲ့</p>
+        </div>
+      </a>
+
+      <a class="flex flex-col group focus:outline-none" href="https://www.youtube.com/watch?v=j39ke9fOsHE" target="_blank">
+        <div class="relative pt-[56.25%] rounded-xl overflow-hidden bg-gray-100">
+          <img class="absolute top-0 start-0 size-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105" src="./images/image-02.png" alt="Gallery Image">
+          <div class="absolute inset-0 flex items-center justify-center">
+            <div class="flex items-center justify-center text-red-600 transition-colors duration-300 rounded-full shadow-lg size-14 bg-white/90 group-hover:bg-red-600 group-hover:text-white">
+              <svg class="ms-1 size-6" fill="currentColor" viewBox="0 0 16 16"><path d="M11.596 8.697l-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/></svg>
+            </div>
+          </div>
+          <span class="absolute top-0 end-0 rounded-se-xl rounded-es-xl text-xs font-medium bg-red-600 text-white py-1.5 px-3">YouTube</span>
+        </div>
+        <div class="mt-5">
+          <h3 class="text-xl font-semibold text-black group-hover:text-[#ff4d00]">သင့်ကလေး အားဖြည့်အချိုရည် သောက်နေလား?</h3>
+          <p class="mt-2 text-gray-500">စိတ်ပိုင်းဆိုင်ရာ ထိခိုက်နိုင်ခြေရှိမှုများ</p>
+        </div>
+      </a>
+
+      <a class="flex flex-col group focus:outline-none" href="https://www.youtube.com/watch?v=Y1FyVlAxo7Q" target="_blank">
+        <div class="relative pt-[56.25%] rounded-xl overflow-hidden bg-gray-100">
+          <img class="absolute top-0 start-0 size-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105" src="./images/image-01.png" alt="Gallery Image">
+          <div class="absolute inset-0 flex items-center justify-center">
+            <div class="flex items-center justify-center text-red-600 transition-colors duration-300 rounded-full shadow-lg size-14 bg-white/90 group-hover:bg-red-600 group-hover:text-white">
+              <svg class="ms-1 size-6" fill="currentColor" viewBox="0 0 16 16"><path d="M11.596 8.697l-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/></svg>
+            </div>
+          </div>
+          <span class="absolute top-0 end-0 rounded-se-xl rounded-es-xl text-xs font-medium bg-red-600 text-white py-1.5 px-3">YouTube</span>
+        </div>
+        <div class="mt-5">
+          <h3 class="text-xl font-semibold text-black group-hover:text-[#ff4d00]">Life is not same for everyone</h3>
+          <p class="mt-2 text-gray-500">Exploring the differences in lifestyle</p>
+        </div>
+      </a>
+
+      <a class="group relative flex flex-col w-full min-h-[300px] bg-gray-900 rounded-xl overflow-hidden hover:shadow-lg transition" href="#">
+        <img class="absolute inset-0 size-full object-cover opacity-50 group-hover:scale-105 transition-transform duration-500" src="https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?auto=format&fit=crop&w=560&q=80" alt="Background Card">
+        <div class="relative mt-auto p-6">
+          <h3 class="text-xl font-bold text-white">Featured Projects</h3>
+          <p class="mt-2 text-white/80 text-sm">Economic and technological advancement books.</p>
+          <div class="mt-4 inline-flex items-center gap-2 text-sm font-medium text-white group-hover:underline">
+            Visit the site
+            <svg class="size-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>
+          </div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+<section id="processes" class="px-6 py-10 font-sans bg-white">
+  <div class="max-w-6xl px-4 py-10 mx-auto sm:px-6 lg:px-8 lg:py-14">
+
+    <!-- Grid -->
+    <div class="lg:grid lg:grid-cols-12 lg:gap-16 lg:items-center">
+      <div class="lg:col-span-7">
+        <!-- Grid -->
+        <div class="grid items-center grid-cols-12 gap-2 sm:gap-6 lg:-translate-x-10">
+          <div class="col-span-4">
+            <img class="rounded-xl" src="./images/image-07.png" alt="Features Image">
+          </div>
+          <!-- End Col -->
+
+          <div class="col-span-3">
+            <img class="rounded-xl" src="./images/image-04.png" alt="Features Image">
+          </div>
+          <!-- End Col -->
+
+          <div class="col-span-5">
+            <img class="rounded-xl" src="./images/image-05.png" alt="Features Image">
+          </div>
+          <!-- End Col -->
+        </div>
+        <!-- End Grid -->
+      </div>
+      <!-- End Col -->
+
+      
+      <div class="mt-5 sm:mt-10 lg:mt-0 lg:col-span-5">
+        <div class="space-y-6 sm:space-y-8">
+          <!-- Title -->
+          <div class="space-y-2 md:space-y-4">
+            <h2 class="text-3xl font-bold text-black lg:text-4xl dark:text-neutral-200">
+              Collaborative tools to design user experience
+            </h2>
+            <p class="text-gray-500 dark:text-neutral-500">
+              Use our tools to explore your ideas and make your vision come true. Then share your work easily.
+            </p>
+          </div>
+          <!-- End Title -->
+
+          <!-- List -->
+          <ul class="space-y-2 sm:space-y-4">
+            <li class="flex gap-x-3">
+              <span class="mt-0.5 size-5 flex justify-center items-center rounded-full bg-blue-50 text-blue-600 dark:bg-blue-800/30 dark:text-blue-500">
+                <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+              <div class="grow">
+                <span class="text-sm text-gray-500 sm:text-base dark:text-neutral-500">
+                  <span class="font-bold">Less routine</span> – more creativity
+                </span>
+              </div>
+            </li>
+
+            <li class="flex gap-x-3">
+              <span class="mt-0.5 size-5 flex justify-center items-center rounded-full bg-blue-50 text-blue-600 dark:bg-blue-800/30 dark:text-blue-500">
+                <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+              <div class="grow">
+                <span class="text-sm text-gray-500 sm:text-base dark:text-neutral-500">
+                  Hundreds of thousands saved
+                </span>
+              </div>
+            </li>
+
+            <li class="flex gap-x-3">
+              <span class="mt-0.5 size-5 flex justify-center items-center rounded-full bg-blue-50 text-blue-600 dark:bg-blue-800/30 dark:text-blue-500">
+                <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+              <div class="grow">
+                <span class="text-sm text-gray-500 sm:text-base dark:text-neutral-500">
+                  Scale budgets <span class="font-bold">efficiently</span>
+                </span>
+              </div>
+            </li>
+          </ul>
+          <!-- End List -->
+        </div>
+      </div>
+      <!-- End Col -->
+    </div>
+    <!-- End Grid -->
+
+  </div>
+</section>
+
+
+<!-- About -->
+ <section id="contact" class="px-6 py-10 font-sans bg-white">
+    <div class="max-w-3xl px-4 py-10 mx-auto sm:px-6 lg:px-8 lg:py-14">
+
+      
+      <!-- Profile -->
+      <div class="flex items-center gap-x-3">
+        <div class="shrink-0">
+          <img class="rounded-full shrink-0 size-16" src="./assets/logo/logo.png" alt="BurmaMade Profile Picture">
+        </div>
+
+        <div class="grow">
+          <h1 class="text-lg font-medium text-gray-800 dark:text-neutral-200">
+            BurmaMade Studio
+          </h1>
+          <p class="text-sm text-gray-600 dark:text-neutral-400">
+            Animation Studio & Software Development
           </p>
         </div>
-        <!-- End Title -->
+      </div>
+      <!-- End Profile -->
 
-        <!-- List -->
-        <ul class="space-y-2 sm:space-y-4">
-          <li class="flex gap-x-3">
-            <span class="mt-0.5 size-5 flex justify-center items-center rounded-full bg-blue-50 text-blue-600 dark:bg-blue-800/30 dark:text-blue-500">
-              <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-            </span>
-            <div class="grow">
-              <span class="text-sm sm:text-base text-gray-500 dark:text-neutral-500">
-                <span class="font-bold">Less routine</span> – more creativity
-              </span>
-            </div>
+      <!-- About -->
+      <div class="mt-8">
+<!--         
+        <p class="text-sm text-gray-600 dark:text-neutral-400">
+          I am a seasoned graphic designer with over 14 years of experience in creating visually appealing and user-centric designs. My expertise spans across UI design, design systems, and custom illustrations, helping clients bring their digital visions to life.
+        </p>
+
+        <p class="mt-3 text-sm text-gray-600 dark:text-neutral-400">
+          Currently, I work remotely for Notion, where I design template UIs, convert them into HTML and CSS, and provide comprehensive support to our users. I am passionate about crafting elegant and functional designs that enhance user experiences.
+        </p> -->
+
+        <ul class="flex flex-col mt-5 gap-y-3">
+          <li class="flex items-center gap-x-2.5">
+            <svg class="shrink-0 size-3.5 text-gray-800 dark:text-neutral-200" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            <a class="text-[13px] text-gray-500 underline hover:text-gray-800 hover:decoration-2 focus:outline-hidden focus:decoration-2 dark:text-neutral-500 dark:hover:text-neutral-400" href="#">
+              burmamadestudio@gmail.com
+            </a>
           </li>
 
-          <li class="flex gap-x-3">
-            <span class="mt-0.5 size-5 flex justify-center items-center rounded-full bg-blue-50 text-blue-600 dark:bg-blue-800/30 dark:text-blue-500">
-              <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-            </span>
-            <div class="grow">
-              <span class="text-sm sm:text-base text-gray-500 dark:text-neutral-500">
-                Hundreds of thousands saved
-              </span>
-            </div>
+          <li class="flex items-center gap-x-2.5">
+            <svg class="shrink-0 size-3.5 text-gray-800 dark:text-neutral-200" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.1881 10.1624L22.7504 0H20.7214L13.2868 8.82385L7.34878 0H0.5L9.47944 13.3432L0.5 24H2.5291L10.3802 14.6817L16.6512 24H23.5L14.1881 10.1624ZM11.409 13.4608L3.26021 1.55962H6.37679L20.7224 22.5113H17.6058L11.409 13.4613V13.4608Z" fill="currentColor"/></svg>
+            <a class="text-[13px] text-gray-500 underline hover:text-gray-800 hover:decoration-2 focus:outline-hidden focus:decoration-2 dark:text-neutral-500 dark:hover:text-neutral-400" href="#">
+              +95 9799189930
+            </a>
           </li>
 
-          <li class="flex gap-x-3">
-            <span class="mt-0.5 size-5 flex justify-center items-center rounded-full bg-blue-50 text-blue-600 dark:bg-blue-800/30 dark:text-blue-500">
-              <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-            </span>
-            <div class="grow">
-              <span class="text-sm sm:text-base text-gray-500 dark:text-neutral-500">
-                Scale budgets <span class="font-bold">efficiently</span>
-              </span>
-            </div>
+          <li class="flex items-center gap-x-2.5">
+            <svg class="shrink-0 size-3.5 text-gray-800 dark:text-neutral-200" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M19.13 5.09C15.22 9.14 10 10.44 2.25 10.94"/><path d="M21.75 12.84c-6.62-1.41-12.14 1-16.38 6.32"/><path d="M8.56 2.75c4.37 6 6 9.42 8 17.72"/></svg>
+            <a class="text-[13px] text-gray-500 underline hover:text-gray-800 hover:decoration-2 focus:outline-hidden focus:decoration-2 dark:text-neutral-500 dark:hover:text-neutral-400" href="#">
+              https://burmamadestudio.github.io
+            </a>
           </li>
         </ul>
-        <!-- End List -->
       </div>
-    </div>
-    <!-- End Col -->
+      <!-- End About -->
   </div>
-  <!-- End Grid -->
-</div>
-<!-- End Features -->
-</div>
+ </section>
 
 
 
 
-  <!-- FAQ -->
-  <div class="max-w-6xl px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
-    <!-- Grid -->
-    <div class="grid md:grid-cols-5 gap-10">
+<!-- 
+  FAQ
+  <div class="max-w-6xl px-4 py-10 mx-auto sm:px-6 lg:px-8 lg:py-14">
+    <div class="grid gap-10 md:grid-cols-5">
       <div class="md:col-span-2">
         <div class="max-w-xs">
           <h2 class="text-2xl font-bold md:text-4xl md:leading-tight dark:text-white">Frequently<br>asked questions</h2>
-          <p class="mt-1 hidden md:block text-gray-600 dark:text-neutral-400">Answers to the most frequently asked questions.</p>
+          <p class="hidden mt-1 text-gray-600 md:block dark:text-neutral-400">Answers to the most frequently asked questions.</p>
         </div>
       </div>
-      <!-- End Col -->
 
       <div class="md:col-span-3">
-        <!-- Accordion -->
-        <div class="hs-accordion-group divide-y divide-gray-200 dark:divide-neutral-700">
-          <div class="hs-accordion pb-3 active" id="hs-basic-with-title-and-arrow-stretched-heading-one">
-            <button class="hs-accordion-toggle group pb-3 inline-flex items-center justify-between gap-x-3 w-full md:text-lg font-semibold text-start text-gray-800 rounded-lg transition hover:text-gray-500 focus:outline-hidden focus:text-gray-500 dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400" aria-expanded="true" aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-one">
+        <div class="divide-y divide-gray-200 hs-accordion-group dark:divide-neutral-700">
+          <div class="pb-3 hs-accordion active" id="hs-basic-with-title-and-arrow-stretched-heading-one">
+            <button class="inline-flex items-center justify-between w-full pb-3 font-semibold text-gray-800 transition rounded-lg hs-accordion-toggle group gap-x-3 md:text-lg text-start hover:text-gray-500 focus:outline-hidden focus:text-gray-500 dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400" aria-expanded="true" aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-one">
               Can I cancel at anytime?
-              <svg class="hs-accordion-active:hidden block shrink-0 size-5 text-gray-600 group-hover:text-gray-500 dark:text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
-              <svg class="hs-accordion-active:block hidden shrink-0 size-5 text-gray-600 group-hover:text-gray-500 dark:text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+              <svg class="block text-gray-600 hs-accordion-active:hidden shrink-0 size-5 group-hover:text-gray-500 dark:text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+              <svg class="hidden text-gray-600 hs-accordion-active:block shrink-0 size-5 group-hover:text-gray-500 dark:text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
             </button>
             <div id="hs-basic-with-title-and-arrow-stretched-collapse-one" class="hs-accordion-content w-full overflow-hidden transition-[height] duration-300" role="region" aria-labelledby="hs-basic-with-title-and-arrow-stretched-heading-one">
               <p class="text-gray-600 dark:text-neutral-400">
@@ -679,11 +674,11 @@
             </div>
           </div>
 
-          <div class="hs-accordion pt-6 pb-3" id="hs-basic-with-title-and-arrow-stretched-heading-two">
-            <button class="hs-accordion-toggle group pb-3 inline-flex items-center justify-between gap-x-3 w-full md:text-lg font-semibold text-start text-gray-800 rounded-lg transition hover:text-gray-500 focus:outline-hidden focus:text-gray-500 dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400" aria-expanded="false" aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-two">
+          <div class="pt-6 pb-3 hs-accordion" id="hs-basic-with-title-and-arrow-stretched-heading-two">
+            <button class="inline-flex items-center justify-between w-full pb-3 font-semibold text-gray-800 transition rounded-lg hs-accordion-toggle group gap-x-3 md:text-lg text-start hover:text-gray-500 focus:outline-hidden focus:text-gray-500 dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400" aria-expanded="false" aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-two">
               My team has credits. How do we use them?
-              <svg class="hs-accordion-active:hidden block shrink-0 size-5 text-gray-600 group-hover:text-gray-500 dark:text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
-              <svg class="hs-accordion-active:block hidden shrink-0 size-5 text-gray-600 group-hover:text-gray-500 dark:text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+              <svg class="block text-gray-600 hs-accordion-active:hidden shrink-0 size-5 group-hover:text-gray-500 dark:text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+              <svg class="hidden text-gray-600 hs-accordion-active:block shrink-0 size-5 group-hover:text-gray-500 dark:text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
             </button>
             <div id="hs-basic-with-title-and-arrow-stretched-collapse-two" class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300" role="region" aria-labelledby="hs-basic-with-title-and-arrow-stretched-heading-two">
               <p class="text-gray-600 dark:text-neutral-400">
@@ -692,11 +687,11 @@
             </div>
           </div>
 
-          <div class="hs-accordion pt-6 pb-3" id="hs-basic-with-title-and-arrow-stretched-heading-three">
-            <button class="hs-accordion-toggle group pb-3 inline-flex items-center justify-between gap-x-3 w-full md:text-lg font-semibold text-start text-gray-800 rounded-lg transition hover:text-gray-500 focus:outline-hidden focus:text-gray-500 dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400" aria-expanded="false" aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-three">
+          <div class="pt-6 pb-3 hs-accordion" id="hs-basic-with-title-and-arrow-stretched-heading-three">
+            <button class="inline-flex items-center justify-between w-full pb-3 font-semibold text-gray-800 transition rounded-lg hs-accordion-toggle group gap-x-3 md:text-lg text-start hover:text-gray-500 focus:outline-hidden focus:text-gray-500 dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400" aria-expanded="false" aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-three">
               How does Preline's pricing work?
-              <svg class="hs-accordion-active:hidden block shrink-0 size-5 text-gray-600 group-hover:text-gray-500 dark:text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
-              <svg class="hs-accordion-active:block hidden shrink-0 size-5 text-gray-600 group-hover:text-gray-500 dark:text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+              <svg class="block text-gray-600 hs-accordion-active:hidden shrink-0 size-5 group-hover:text-gray-500 dark:text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+              <svg class="hidden text-gray-600 hs-accordion-active:block shrink-0 size-5 group-hover:text-gray-500 dark:text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
             </button>
             <div id="hs-basic-with-title-and-arrow-stretched-collapse-three" class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300" role="region" aria-labelledby="hs-basic-with-title-and-arrow-stretched-heading-three">
               <p class="text-gray-600 dark:text-neutral-400">
@@ -705,11 +700,11 @@
             </div>
           </div>
 
-          <div class="hs-accordion pt-6 pb-3" id="hs-basic-with-title-and-arrow-stretched-heading-four">
-            <button class="hs-accordion-toggle group pb-3 inline-flex items-center justify-between gap-x-3 w-full md:text-lg font-semibold text-start text-gray-800 rounded-lg transition hover:text-gray-500 focus:outline-hidden focus:text-gray-500 dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400" aria-expanded="false" aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-four">
+          <div class="pt-6 pb-3 hs-accordion" id="hs-basic-with-title-and-arrow-stretched-heading-four">
+            <button class="inline-flex items-center justify-between w-full pb-3 font-semibold text-gray-800 transition rounded-lg hs-accordion-toggle group gap-x-3 md:text-lg text-start hover:text-gray-500 focus:outline-hidden focus:text-gray-500 dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400" aria-expanded="false" aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-four">
               How secure is Preline?
-              <svg class="hs-accordion-active:hidden block shrink-0 size-5 text-gray-600 group-hover:text-gray-500 dark:text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
-              <svg class="hs-accordion-active:block hidden shrink-0 size-5 text-gray-600 group-hover:text-gray-500 dark:text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+              <svg class="block text-gray-600 hs-accordion-active:hidden shrink-0 size-5 group-hover:text-gray-500 dark:text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+              <svg class="hidden text-gray-600 hs-accordion-active:block shrink-0 size-5 group-hover:text-gray-500 dark:text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
             </button>
             <div id="hs-basic-with-title-and-arrow-stretched-collapse-four" class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300" role="region" aria-labelledby="hs-basic-with-title-and-arrow-stretched-heading-four">
               <p class="text-gray-600 dark:text-neutral-400">
@@ -718,11 +713,11 @@
             </div>
           </div>
 
-          <div class="hs-accordion pt-6 pb-3" id="hs-basic-with-title-and-arrow-stretched-heading-five">
-            <button class="hs-accordion-toggle group pb-3 inline-flex items-center justify-between gap-x-3 w-full md:text-lg font-semibold text-start text-gray-800 rounded-lg transition hover:text-gray-500 focus:outline-hidden focus:text-gray-500 dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400" aria-expanded="false" aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-five">
+          <div class="pt-6 pb-3 hs-accordion" id="hs-basic-with-title-and-arrow-stretched-heading-five">
+            <button class="inline-flex items-center justify-between w-full pb-3 font-semibold text-gray-800 transition rounded-lg hs-accordion-toggle group gap-x-3 md:text-lg text-start hover:text-gray-500 focus:outline-hidden focus:text-gray-500 dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400" aria-expanded="false" aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-five">
               How do I get access to a theme I purchased?
-              <svg class="hs-accordion-active:hidden block shrink-0 size-5 text-gray-600 group-hover:text-gray-500 dark:text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
-              <svg class="hs-accordion-active:block hidden shrink-0 size-5 text-gray-600 group-hover:text-gray-500 dark:text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+              <svg class="block text-gray-600 hs-accordion-active:hidden shrink-0 size-5 group-hover:text-gray-500 dark:text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+              <svg class="hidden text-gray-600 hs-accordion-active:block shrink-0 size-5 group-hover:text-gray-500 dark:text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
             </button>
             <div id="hs-basic-with-title-and-arrow-stretched-collapse-five" class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300" role="region" aria-labelledby="hs-basic-with-title-and-arrow-stretched-heading-five">
               <p class="text-gray-600 dark:text-neutral-400">
@@ -731,11 +726,11 @@
             </div>
           </div>
 
-          <div class="hs-accordion pt-6 pb-3" id="hs-basic-with-title-and-arrow-stretched-heading-six">
-            <button class="hs-accordion-toggle group pb-3 inline-flex items-center justify-between gap-x-3 w-full md:text-lg font-semibold text-start text-gray-800 rounded-lg transition hover:text-gray-500 focus:outline-hidden focus:text-gray-500 dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400" aria-expanded="false" aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-six">
+          <div class="pt-6 pb-3 hs-accordion" id="hs-basic-with-title-and-arrow-stretched-heading-six">
+            <button class="inline-flex items-center justify-between w-full pb-3 font-semibold text-gray-800 transition rounded-lg hs-accordion-toggle group gap-x-3 md:text-lg text-start hover:text-gray-500 focus:outline-hidden focus:text-gray-500 dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400" aria-expanded="false" aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-six">
               Upgrade License Type
-              <svg class="hs-accordion-active:hidden block shrink-0 size-5 text-gray-600 group-hover:text-gray-500 dark:text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
-              <svg class="hs-accordion-active:block hidden shrink-0 size-5 text-gray-600 group-hover:text-gray-500 dark:text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+              <svg class="block text-gray-600 hs-accordion-active:hidden shrink-0 size-5 group-hover:text-gray-500 dark:text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+              <svg class="hidden text-gray-600 hs-accordion-active:block shrink-0 size-5 group-hover:text-gray-500 dark:text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
             </button>
             <div id="hs-basic-with-title-and-arrow-stretched-collapse-six" class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300" role="region" aria-labelledby="hs-basic-with-title-and-arrow-stretched-heading-six">
               <p class="text-gray-600 dark:text-neutral-400">
@@ -744,21 +739,17 @@
             </div>
           </div>
         </div>
-        <!-- End Accordion -->
       </div>
-      <!-- End Col -->
     </div>
-    <!-- End Grid -->
   </div>
-  <!-- End FAQ -->
+   -->
 </main>
-<!-- ========== END MAIN CONTENT ========== -->
 
 <!-- ========== FOOTER ========== -->
-<footer class="mt-auto bg-black w-full dark:bg-neutral-950">
+<footer class="w-full mt-auto bg-black dark:bg-neutral-950">
   <div class="mt-auto w-full max-w-[85rem] py-10 px-4 sm:px-6 lg:px-8 lg:pt-20 mx-auto">
     <!-- Grid -->
-    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
+    <div class="grid grid-cols-2 gap-6 md:grid-cols-4 lg:grid-cols-5">
       <div class="col-span-full lg:col-span-1">
         <a class="flex-none text-xl font-semibold text-white focus:outline-hidden focus:opacity-80" href="#" aria-label="Brand">
           <div class="flex items-center justify-center w-32 h-32 overflow-hidden rounded-md">
@@ -771,10 +762,9 @@
       <div class="col-span-1">
         <h4 class="font-semibold text-gray-100">Product</h4>
 
-        <div class="mt-3 grid space-y-3">
-          <p><a class="inline-flex gap-x-2 text-gray-400 hover:text-gray-200 focus:outline-hidden focus:text-gray-200 dark:text-neutral-400 dark:hover:text-neutral-200 dark:focus:text-neutral-200" href="#">Pricing</a></p>
-          <p><a class="inline-flex gap-x-2 text-gray-400 hover:text-gray-200 focus:outline-hidden focus:text-gray-200 dark:text-neutral-400 dark:hover:text-neutral-200 dark:focus:text-neutral-200" href="#">Changelog</a></p>
-          <p><a class="inline-flex gap-x-2 text-gray-400 hover:text-gray-200 focus:outline-hidden focus:text-gray-200 dark:text-neutral-400 dark:hover:text-neutral-200 dark:focus:text-neutral-200" href="#">Docs</a></p>
+        <div class="grid mt-3 space-y-3">
+          <p><a class="inline-flex text-gray-400 gap-x-2 hover:text-gray-200 focus:outline-hidden focus:text-gray-200 dark:text-neutral-400 dark:hover:text-neutral-200 dark:focus:text-neutral-200" href="#">Pricing</a></p>
+          <p><a class="inline-flex text-gray-400 gap-x-2 hover:text-gray-200 focus:outline-hidden focus:text-gray-200 dark:text-neutral-400 dark:hover:text-neutral-200 dark:focus:text-neutral-200" href="#">Docs</a></p>
         </div>
       </div>
       <!-- End Col -->
@@ -782,11 +772,11 @@
       <div class="col-span-1">
         <h4 class="font-semibold text-gray-100">Company</h4>
 
-        <div class="mt-3 grid space-y-3">
-          <p><a class="inline-flex gap-x-2 text-gray-400 hover:text-gray-200 focus:outline-hidden focus:text-gray-200 dark:text-neutral-400 dark:hover:text-neutral-200 dark:focus:text-neutral-200" href="#">About us</a></p>
-          <p><a class="inline-flex gap-x-2 text-gray-400 hover:text-gray-200 focus:outline-hidden focus:text-gray-200 dark:text-neutral-400 dark:hover:text-neutral-200 dark:focus:text-neutral-200" href="#">Blog</a></p>
-          <p><a class="inline-flex gap-x-2 text-gray-400 hover:text-gray-200 focus:outline-hidden focus:text-gray-200 dark:text-neutral-400 dark:hover:text-neutral-200 dark:focus:text-neutral-200" href="#">Careers</a> <span class="inline-block ms-1 text-xs bg-blue-700 text-white py-1 px-2 rounded-lg">We're hiring</span></p>
-          <p><a class="inline-flex gap-x-2 text-gray-400 hover:text-gray-200 focus:outline-hidden focus:text-gray-200 dark:text-neutral-400 dark:hover:text-neutral-200 dark:focus:text-neutral-200" href="#">Customers</a></p>
+        <div class="grid mt-3 space-y-3">
+          <p><a class="inline-flex text-gray-400 gap-x-2 hover:text-gray-200 focus:outline-hidden focus:text-gray-200 dark:text-neutral-400 dark:hover:text-neutral-200 dark:focus:text-neutral-200" href="#">About us</a></p>
+          <p><a class="inline-flex text-gray-400 gap-x-2 hover:text-gray-200 focus:outline-hidden focus:text-gray-200 dark:text-neutral-400 dark:hover:text-neutral-200 dark:focus:text-neutral-200" href="#">Blog</a></p>
+          <p><a class="inline-flex text-gray-400 gap-x-2 hover:text-gray-200 focus:outline-hidden focus:text-gray-200 dark:text-neutral-400 dark:hover:text-neutral-200 dark:focus:text-neutral-200" href="#">Careers</a> <span class="inline-block px-2 py-1 text-xs text-white bg-blue-700 rounded-lg ms-1">We're hiring</span></p>
+          <p><a class="inline-flex text-gray-400 gap-x-2 hover:text-gray-200 focus:outline-hidden focus:text-gray-200 dark:text-neutral-400 dark:hover:text-neutral-200 dark:focus:text-neutral-200" href="#">Customers</a></p>
         </div>
       </div>
       <!-- End Col -->
@@ -795,17 +785,17 @@
         <h4 class="font-semibold text-gray-100">Stay up to date</h4>
 
         <form>
-          <div class="mt-4 flex flex-col items-center gap-2 sm:flex-row sm:gap-3 bg-white rounded-lg p-2 dark:bg-neutral-900">
+          <div class="flex flex-col items-center gap-2 p-2 mt-4 bg-white rounded-lg sm:flex-row sm:gap-3 dark:bg-neutral-900">
             <div class="w-full">
               <label for="hero-input" class="sr-only">Subscribe</label>
               <input type="text" id="hero-input" name="hero-input" class="py-2.5 sm:py-3 px-4 block w-full border-transparent rounded-lg sm:text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-transparent dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600" placeholder="Enter your email">
             </div>
-            <a class="w-full sm:w-auto whitespace-nowrap p-3 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-black text-white hover:bg-blue-700 focus:outline-hidden focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none" href="#">
+            <a class="inline-flex items-center justify-center w-full p-3 text-sm font-medium text-white bg-black border border-transparent rounded-lg sm:w-auto whitespace-nowrap gap-x-2 hover:bg-blue-700 focus:outline-hidden focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none" href="#">
               Subscribe
             </a>
           </div>
           <p class="mt-3 text-sm text-gray-400">
-            New UI kits or big discounts. Never spam.
+            Connect our team. Never spam.
           </p>
         </form>
       </div>
@@ -813,8 +803,8 @@
     </div>
     <!-- End Grid -->
 
-    <div class="mt-5 sm:mt-12 grid gap-y-2 sm:gap-y-0 sm:flex sm:justify-between sm:items-center">
-      <div class="flex flex-wrap justify-between items-center gap-2">
+    <div class="grid mt-5 sm:mt-12 gap-y-2 sm:gap-y-0 sm:flex sm:justify-between sm:items-center">
+      <div class="flex flex-wrap items-center justify-between gap-2">
         <p class="text-sm text-gray-400 dark:text-neutral-400">
           © 2026 BurmaMade Studio.
         </p>
@@ -823,27 +813,27 @@
 
       <!-- Social Brands -->
       <div>
-        <a class="size-10 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-white hover:bg-white/10 focus:outline-hidden focus:bg-white/10 disabled:opacity-50 disabled:pointer-events-none" href="#">
+        <a class="inline-flex items-center justify-center text-sm font-semibold text-white border border-transparent rounded-lg size-10 gap-x-2 hover:bg-white/10 focus:outline-hidden focus:bg-white/10 disabled:opacity-50 disabled:pointer-events-none" href="#">
           <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
             <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
           </svg>
         </a>
-        <a class="size-10 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-white hover:bg-white/10 focus:outline-hidden focus:bg-white/10 disabled:opacity-50 disabled:pointer-events-none" href="#">
+        <a class="inline-flex items-center justify-center text-sm font-semibold text-white border border-transparent rounded-lg size-10 gap-x-2 hover:bg-white/10 focus:outline-hidden focus:bg-white/10 disabled:opacity-50 disabled:pointer-events-none" href="#">
           <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
             <path d="M15.545 6.558a9.42 9.42 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.689 7.689 0 0 1 5.352 2.082l-2.284 2.284A4.347 4.347 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.792 4.792 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.702 3.702 0 0 0 1.599-2.431H8v-3.08h7.545z"/>
           </svg>
         </a>
-        <a class="size-10 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-white hover:bg-white/10 focus:outline-hidden focus:bg-white/10 disabled:opacity-50 disabled:pointer-events-none" href="#">
+        <a class="inline-flex items-center justify-center text-sm font-semibold text-white border border-transparent rounded-lg size-10 gap-x-2 hover:bg-white/10 focus:outline-hidden focus:bg-white/10 disabled:opacity-50 disabled:pointer-events-none" href="#">
           <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
             <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
           </svg>
         </a>
-        <a class="size-10 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-white hover:bg-white/10 focus:outline-hidden focus:bg-white/10 disabled:opacity-50 disabled:pointer-events-none" href="#">
+        <a class="inline-flex items-center justify-center text-sm font-semibold text-white border border-transparent rounded-lg size-10 gap-x-2 hover:bg-white/10 focus:outline-hidden focus:bg-white/10 disabled:opacity-50 disabled:pointer-events-none" href="#">
           <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
             <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
           </svg>
         </a>
-        <a class="size-10 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-white hover:bg-white/10 focus:outline-hidden focus:bg-white/10 disabled:opacity-50 disabled:pointer-events-none" href="#">
+        <a class="inline-flex items-center justify-center text-sm font-semibold text-white border border-transparent rounded-lg size-10 gap-x-2 hover:bg-white/10 focus:outline-hidden focus:bg-white/10 disabled:opacity-50 disabled:pointer-events-none" href="#">
           <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
             <path d="M3.362 10.11c0 .926-.756 1.681-1.681 1.681S0 11.036 0 10.111C0 9.186.756 8.43 1.68 8.43h1.682v1.68zm.846 0c0-.924.756-1.68 1.681-1.68s1.681.756 1.681 1.68v4.21c0 .924-.756 1.68-1.68 1.68a1.685 1.685 0 0 1-1.682-1.68v-4.21zM5.89 3.362c-.926 0-1.682-.756-1.682-1.681S4.964 0 5.89 0s1.68.756 1.68 1.68v1.682H5.89zm0 .846c.924 0 1.68.756 1.68 1.681S6.814 7.57 5.89 7.57H1.68C.757 7.57 0 6.814 0 5.89c0-.926.756-1.682 1.68-1.682h4.21zm6.749 1.682c0-.926.755-1.682 1.68-1.682.925 0 1.681.756 1.681 1.681s-.756 1.681-1.68 1.681h-1.681V5.89zm-.848 0c0 .924-.755 1.68-1.68 1.68A1.685 1.685 0 0 1 8.43 5.89V1.68C8.43.757 9.186 0 10.11 0c.926 0 1.681.756 1.681 1.68v4.21zm-1.681 6.748c.926 0 1.682.756 1.682 1.681S11.036 16 10.11 16s-1.681-.756-1.681-1.68v-1.682h1.68zm0-.847c-.924 0-1.68-.755-1.68-1.68 0-.925.756-1.681 1.68-1.681h4.21c.924 0 1.68.756 1.68 1.68 0 .926-.756 1.681-1.68 1.681h-4.21z"/>
           </svg>
